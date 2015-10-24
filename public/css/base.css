@@ -1,0 +1,8 @@
+@import url("bootstrap.min.css"); 							/* Main Bootstrap */
+@import url("style.css");											/* Main theme styles */
+@import url("menu.css");											/* Menu styles */
+@import url("responsive.css");									/* Responsive */
+@import url("custom.html");										/* Your custom css (We reccomend use it for a faster and simplified item update) */
+@import url("elegant_font/elegant_font.css");	/* Icon pack */
+@import url("fontello/css/fontello.css");				/* Icon pack */
+@import url("magnific-popup.css");						/* Lightbox & dialog script */

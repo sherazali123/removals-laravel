@@ -1,0 +1,96 @@
+/*============================================================================================*/
+/* Repsonsive  */
+/*============================================================================================*/
+
+@media (min-width: 768px) and (max-width: 1200px) {
+.main-menu ul li.megamenu .menu-wrapper {width:940px;}
+}
+@media (max-width: 991px) {
+	.sticky nav{ margin-top:3px; }
+	nav{ margin-top:15px; }
+	header{ padding-bottom:10px;}
+	header.sticky{ padding-bottom:0;}
+}
+@media (max-width: 991px) {
+.main-menu ul li.megamenu .menu-wrapper {width:auto; margin-top:20px;}
+a.btn_quote{
+	float:none;
+	margin:auto;
+	margin-top:10px;
+	display:inline-block;
+	text-align:center;
+	width:170px;
+	display:block;
+}
+#get_quote h3{
+	text-align:center;
+}
+}
+@media (max-width: 768px) {
+.bg_content div{padding:0 10%; font-size:14px;}
+.bg_content div h3{font-size:24px;}
+.step{padding:20px 31px 20px 31px;}
+}	
+
+/* Mobile Landscape */
+@media (max-width: 767px) {
+header{ padding-top:0;}
+header.sticky{ padding-top:7px;}
+header.sticky .cmn-toggle-switch{ margin-top:5px;}
+#top_line{ display:none;}
+.main_title{font-size:14px;}
+.main_title h2{  font-size:24px; }
+.main_title p{font-size:16px}
+
+/* Margin tools */
+.margin_60 {padding-top:30px; padding-bottom:30px;}
+.margin_30 {margin-top:15px; margin-bottom:15px;}
+
+.bg_content{
+   height:380px;
+}
+.bg_content > div{
+  padding:0 5%;
+	font-size:13px;
+	padding-top:20px;
+}
+.bg_content div h3{
+	font-size:20px;
+}
+.bg_content div h3:before,.bg_content div h3:after {
+	display:none;
+}
+.bg_content div h3:before{
+    margin-right: 0;
+}
+.bg_content div h3:after {
+    margin-left: 0;
+}
+/* Banners */
+.banner p{
+	padding-right:0;
+}
+.banner a{
+	position:relative;
+	top:15px;
+	right:0;
+	left:0;
+	margin-bottom:20px;
+}
+.banner h4{
+	font-size:24px;
+}
+#position{display:none;}
+ul.stepy-titles li {width:100%; display:block;}
+.stepy-titles li {margin-left:0;}
+#sub_header .main_title p{font-size:12px;}
+}
+/* Mobile Landscape */
+@media (max-width: 480px) {
+#sub_header{padding-top:40px;}
+.box_style_1{padding:15px;}
+.intro_title h1, .intro_title p{ display:none;}
+#get_quote h3{ font-size:18px;}
+a.button_intro{ display:none;}
+
+}
