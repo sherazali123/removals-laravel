@@ -51,10 +51,18 @@
                             <div class="row text-center">
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/rental/boxes.png') }}" alt="boxes" data-retina="true">
+                                        <img src="img/services/rental/boxes.png" alt="" data-retina="true">
                                   </p>
                                     <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Boxes</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="boxes_no" id="boxes_no">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -64,19 +72,24 @@
                                                 <option value="5">5</option>
                                                 <option value="6">6</option>
                                             </select>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <label class="sm-label float_left">Boxes</label>
                                         </div>
                                         
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/rental/boxes_with_books.png') }}" alt="boxes_with_books" data-retina="true">
+                                        <img src="img/services/rental/boxes_with_books.png" alt="" data-retina="true">
                                   </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Boxes with books</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
                                      <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="boxes_no" id="boxes_no">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -86,9 +99,6 @@
                                                 <option value="5">5</option>
                                                 <option value="6">6</option>
                                             </select>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <label  class="sm-label float_left">Boxes with books</label>
                                         </div>
                                         
                                     </div>
@@ -96,10 +106,18 @@
                                 </div>
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/rental/cart.png') }}" alt="cart" data-retina="true">
+                                        <img src="img/services/rental/cart.png" alt="" data-retina="true">
                                   </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Moving cart</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
                                      <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="moving_cart" id="moving_cart">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -110,18 +128,22 @@
                                                 <option value="6">6</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-8">
-                                            <label class="sm-label float_left">Moving cart</label>
-                                        </div>
-                                        
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/rental/single_bed.png') }}" alt="single_bed" data-retina="true">
+                                        <img src="img/services/rental/single_bed.png" alt="" data-retina="true">
                                   </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Single bed cover</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
                                      <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="single_bed_cover" id="single_bed_cover">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -132,18 +154,23 @@
                                                 <option value="6">6</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-8">
-                                            <label class="sm-label float_left">Single bed cover</label>
-                                        </div>
                                         
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/rental/double_bed.png') }}" alt="double_bed" data-retina="true">
+                                        <img src="img/services/rental/double_bed.png" alt="" data-retina="true">
                                   </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Double bed cover</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
                                      <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="double_bed_cover" id="double_bed_cover">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -154,18 +181,23 @@
                                                 <option value="6">6</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-8">
-                                            <label class="sm-label float_left">Double bed cover</label>
-                                        </div>
-                                        
+                    
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/rental/queen_bed.png') }}" alt="queen_bed" data-retina="true">
+                                        <img src="img/services/rental/queen_bed.png" alt="" data-retina="true">
                                   </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Queen bed cover</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
                                      <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="queen_bed_cover" id="queen_bed_cover">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -176,10 +208,7 @@
                                                 <option value="6">6</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-8">
-                                            <label class="sm-label float_left">Queen bed cover</label>
-                                        </div>
-                                        
+                            
                                     </div>
                                 </div>
                             </div>
@@ -197,10 +226,18 @@
                                 
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/purchase/tape.png') }}" alt="tape" data-retina="true">
+                                        <img src="img/services/purchase/tape.png" alt="" data-retina="true">
                                   </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Moving Tape</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
                                      <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="moving_cart" id="moving_cart">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -211,18 +248,23 @@
                                                 <option value="6">6</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-8">
-                                            <label class="sm-label float_left">Moving Tape</label>
-                                        </div>
                                         
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/purchase/cardboard.png') }}" alt="cardboard" data-retina="true">
+                                        <img src="img/services/purchase/cardboard.png" alt="" data-retina="true">
                                   </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Cardboard Boxes</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
                                      <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="single_bed_cover" id="single_bed_cover">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -233,18 +275,23 @@
                                                 <option value="6">6</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-8">
-                                            <label class="sm-label float_left">Cardboard Boxes</label>
-                                        </div>
                                         
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/purchase/gloves.png') }}" alt="gloves" data-retina="true">
+                                        <img src="img/services/purchase/gloves.png" alt="" data-retina="true">
                                   </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Gloves</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
                                      <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="double_bed_cover" id="double_bed_cover">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -255,18 +302,23 @@
                                                 <option value="6">6</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-8">
-                                            <label class="sm-label float_left">Gloves</label>
-                                        </div>
-                                        
+                                       
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <p>
-                                        <img src="{{ asset('/img/services/purchase/bubble_wrap.png') }}" alt="bubble_wrap" data-retina="true">
+                                        <img src="img/services/purchase/bubble_wrap.png" alt="" data-retina="true">
                                   </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>Bubble Wraps</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ 100</label>
+                                        </div>
+                                    </div>
                                      <div class="row">
-                                        <div class="col-md-4 remove_right_padding">
+                                        <div class="col-md-12">
                                             <select class="form-control thumbnail_select required" name="queen_bed_cover" id="queen_bed_cover">
                                                 <option value="0" selected>0</option>
                                                 <option value="1">1</option>
@@ -277,10 +329,6 @@
                                                 <option value="6">6</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-8">
-                                            <label class="sm-label float_left">Bubble Wrap</label>
-                                        </div>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -397,7 +445,6 @@
                             </div>
                             <button type="submit" class="btn_1 medium">Order</button> 
                         </div><!--End step -->
-                        
                        
             
                     </form>

@@ -83,14 +83,14 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-3">
                     <div id="logo">
-                        <a href="{{ url('/') }}"><img src="{{ asset('/img/logo.png') }}" width="150" height="35" alt="Removals" data-retina="true"></a>
+                        <a href="{{ url('/') }}"><img src="{{ asset('/img/logo_web.jpg') }}" width="150" height="35" alt="Removals" data-retina="true"></a>
                     </div>
                 </div>
                 <nav class="col-md-9 col-sm-9 col-xs-9">
                     <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
                     <div class="main-menu">
                         <div id="header_menu">
-                            <img src="{{ asset('/img/logo.png') }}" width="150" height="35" alt="Removals" data-retina="true">
+                            <img src="{{ asset('/img/logo_web.jpg') }}" width="150" height="35" alt="Removals" data-retina="true">
                         </div>
                         <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
                         <ul>
@@ -99,7 +99,6 @@
                             </li>
                             <li class="submenu">
                                 <a href="{{ url('/box-rental') }}" >Box Rental </a>
-                              
                             </li>
                             <li class="submenu">
                                 <a href="{{ url('/classified-ad') }}">Classified Ad </a>

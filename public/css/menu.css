@@ -14,7 +14,7 @@
 /*First level styles */			
 .main-menu > ul > li > a {color: #333;padding: 0 20px 20px  20px; font-size:14px; text-transform:uppercase;}
 .sticky .main-menu > ul > li > a {color: #333;}
-.main-menu > ul > li:hover > a {color: #629976;}
+.main-menu > ul > li:hover > a {color: #06728D;}
 
 /* Opacity mask when left open */
 .layer {display: none; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 100; min-height: 100%; background-color: #000; opacity: 0; z-index:9999;}
@@ -71,7 +71,7 @@ a.dropdown-toggle.icon-search{display: inline-block;}
 a.show-submenu:hover,
 a.show-submenu:focus,
 a.show-submenu-mega:hover,
-a.show-submenu-mega:focus{color:#629976 !important;background-color:#f9f9f9;}	
+a.show-submenu-mega:focus{color:#06728D !important;background-color:#f9f9f9;}	
 	
 .main-menu ul li  {border-top: none;border-bottom: 1px solid #ededed;color: #fff;}
 

@@ -19,6 +19,7 @@
 
 
 
+
 @section('footerjs')
 <!-- Specific scripts -->
 	<script src="{{ asset('/js/jquery.validate.js') }}"></script>

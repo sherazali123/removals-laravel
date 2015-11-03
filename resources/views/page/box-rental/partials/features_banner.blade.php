@@ -1,37 +1,37 @@
-<div id="how_to" class="how_to">
+
+        <div id="how_to" class="how_to">
             <div class="container">
                 <div class="row">
                     <div class="col-md-1 text-center"> </div>
-                    <div class="col-md-2  text-center">
+                    <div class="col-md-2 text-center">
                         <p>
-                            <img src="{{ asset('/img/howto/calender.png') }}" alt="calender"  data-retina="true">
+                            <img src="{{ asset('/img/howto/calender.png') }}" alt=""  data-retina="true">
                       </p>
-                        <h4>For 14 days</h4>
+                        <h5>For 14 days</h5>
                     </div>
                     <div class="col-md-2  text-center">
                         <p>
-                            <img src="{{ asset('/img/howto/plastic_bag.png') }}" alt="plastic_bag"  data-retina="true">
+                            <img src="{{ asset('/img/howto/plastic_bag.png') }}" alt=""  data-retina="true">
                       </p>
-                        <h4>Plastic boxes</h4>
-                        
+                        <h5>Plastic boxes</h5>
                     </div>
-                    <div class="col-md-2  text-center">
+                    <div class="col-md-2 text-center">
                         <p>
-                            <img src="{{ asset('/img/howto/deposit.png') }}" alt="deposit"  data-retina="true">
+                            <img src="{{ asset('/img/howto/deposit.png') }}" alt=""  data-retina="true">
                       </p>
-                        <h4>Deposit required</h4>
+                        <h5>Deposit required</h5>
                     </div>
-                    <div class="col-md-2  text-center">
+                    <div class="col-md-2 text-center">
                         <p>
-                            <img src="{{ asset('/img/howto/thumbsup.png') }}" alt="thumbsup" data-retina="true">
+                            <img src="{{ asset('/img/howto/thumbsup.png') }}" alt="" data-retina="true">
                       </p>
-                        <h4>Easy preperation</h4>
+                        <h5>Easy preperation</h5>
                     </div>
-                    <div class="col-md-2  text-center">
+                    <div class="col-md-2 text-center">
                         <p>
-                            <img src="{{ asset('/img/howto/free.png') }}" alt="free"  data-retina="true">
+                            <img src="{{ asset('/img/howto/free.png') }}" alt=""  data-retina="true">
                       </p>
-                        <h4>Free rental fee</h4>
+                        <h5>Free rental fee</h5>
                     </div>
                     <div class="col-md-1 text-center"> </div>
                 </div><!-- End row -->

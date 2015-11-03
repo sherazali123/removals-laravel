@@ -37,4 +37,11 @@ class BaseController extends Controller {
         $this->view_data['meta_data']['author'] = "Sheraz Ali";
     }
 
+    public function printArray($arr){
+        echo '<pre>';
+        print_r($arr);
+        echo '</pre>';
+        die;
+    }
+
 }

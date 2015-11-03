@@ -33,6 +33,7 @@ class BoxRentalController extends Controller {
 	public function index()
 	{
 		//
+		die("here");
 	}
 
 	/**
@@ -42,7 +43,7 @@ class BoxRentalController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		die;		
 	}
 
 	/**

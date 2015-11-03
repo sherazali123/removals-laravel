@@ -8,7 +8,7 @@
 @section('content')
     
     @include('page/classified-ad/partials/header')
-    @include('page/classified-ad/partials/list')
+    @include('page/classified-ad/show_partials/list')
 
 @endsection
 

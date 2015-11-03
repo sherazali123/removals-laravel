@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6{-webkit-font-smoothing:antialiased; color:#333;}
 h3{ font-size:22px;}
 
 /*General links color*/
-a {color: #629976;text-decoration: none;-webkit-transition: all 0.2s ease;transition: all 0.2s ease; outline:none;}
+a {color: #06728D;text-decoration: none;-webkit-transition: all 0.2s ease;transition: all 0.2s ease; outline:none;}
 a:hover,a:focus {color: #111;text-decoration: none; outline:none;}
 
 a.link_normal{
@@ -99,7 +99,7 @@ a.btn_1, .btn_1{
 	font-family: inherit;
 	font-size: inherit;
 	color:#fff;
-	background: #83c99f;
+	background: #06728D;
 	cursor: pointer;
 	padding: 7px 20px;
 	display: inline-block;
@@ -156,12 +156,11 @@ a.btn_quote{
 	text-transform:uppercase;
 	font-weight:bold;
 	border:2px solid #fff;
-	float:right;
 	white-space:nowrap;
 	text-shadow:none;
 }
 a.btn_quote:hover{
-	color:#629976;
+	color:#01576D;
 	background:#fff;
 }
 a.btn_full, .btn_full{
@@ -297,7 +296,7 @@ footer a{
 	color:#fff;
 }
 footer a:hover{
-	color:#82ca9c;
+	color:#06728D;
 }
 footer ul{
 	margin:0;
@@ -376,10 +375,10 @@ ul#contact_details_footer li#address_footer, ul#contact_details_footer li#phone_
 	top:-3px
 }
 #copy{
-	background-color:#82ca9c;
+	background-color:#01576D;
 	padding:10px 0;
 	text-align:center;
-	color:#222;
+	color:#FFFFFF;
 	font-size:12px;
 }
 
@@ -388,12 +387,11 @@ ul#contact_details_footer li#address_footer, ul#contact_details_footer li#phone_
 /*============================================================================================*/
 /*-------- 2.1 Home --------*/
 #get_quote {
-	background:#663366 url(../img/pattern_green.png) repeat;
+	background:#06728D  url(../img/pattern_green.png) repeat;
 	padding:30px 0;
 	color:#fff;
 }
 #get_quote.green {
-	background:#629976 url(../img/pattern_green.png) repeat;
 	padding:30px 0;
 	color:#fff;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -701,7 +699,7 @@ ul.feat li img{
 	margin-bottom:10px;
 }
 .form_title h3 strong{
-	background-color:#629976;
+	background-color:#06728D;
 	text-align:center;
 	width:40px;
 	height:40px;
@@ -785,7 +783,7 @@ a.button-back, a.button-next {text-decoration:none; color:#fff; }
 	font-family: inherit;
 	font-size: inherit;
 	color:#fff;
-	background: #83c99f;
+	background: #06728D;
 	cursor: pointer;
 	padding: 7px 20px;
 	display: inline-block;
@@ -809,9 +807,9 @@ a.button-back, a.button-next {text-decoration:none; color:#fff; }
 ul.stepy-titles { margin:0; padding:0;}
 .stepy-titles { list-style: none; margin: 0; padding: 0; width: 100%; margin-bottom:0; height:40px; }
 .stepy-titles li:first-child {margin-left:0;}
-.stepy-titles li { cursor: pointer; float: left; padding: 7px 20px; background:#f0f0f0; font-weight:600; margin-bottom:2px;  margin-left:2px; position:relative; font-size:16px; }
+.stepy-titles li { cursor: pointer; float: left; padding: 7px 20px; width: 25%; background:#f0f0f0; font-weight:600; margin-bottom:2px;  margin-left:0px;    border-left: 1px solid #FFFFFF; position:relative; font-size:16px; }
 .stepy-titles li span { font-size:11px; display: block; font-weight:normal; }
-.stepy-titles .current-step { cursor: auto; background:#629976; padding: 7px 20px; color:#fff;}
+.stepy-titles .current-step { cursor: auto; background:#06728D; padding: 7px 20px; color:#fff;}
 
 .form-control.error{ background:#fdf5f5}
 .stepy-error{ display:block;}
@@ -1035,7 +1033,7 @@ ul.list_2 li:before {
   font-family: 'ElegantIcons';
   font-size:14px;
   content: "\5c";
-  color:#629976;
+  color:#06728D;
   position:absolute;
   left:0;
   top:0;
@@ -1267,7 +1265,7 @@ ul.list_2 li:before {
   -webkit-box-shadow: none;
   box-shadow:none;
 }
-.panel-title a {display:block; color:#629976;}
+.panel-title a {display:block; color:#06728D;}
 .panel-default > .panel-heading {
   background-color: #f9f9f9;
 }
@@ -1305,18 +1303,14 @@ blockquote.styled{
 .how_to {
 	background: rgba(90, 83, 83, 0) url(../img/pattern_green.png) repeat !important
 }
-.how_to .how_to_element {
-	width: 20%;
-	    
-}
-.how_to h3 {
-	color: #4D4D4D  !important;
-}
 .how_to p {
 	color: rgba(70, 63, 63, 0.27) !important;
 }
-.how_to h4 {
-    font-size: 15px !important;
+.how_to h3 {
+    color: #4E4E50 !important;
+}
+.how_to h5 {
+    font-size: 17px !important;
     color: #4E4E50 !important;
 }
 .question_row {
@@ -1354,8 +1348,8 @@ blockquote.styled{
     padding: 10px !important;
 }
 td.sText {
-	color: #468847;
-    background-color: #dff0d8!important;
+	color: #4D4D4D;
+    background-color: #FFFFFF!important;
 }
 td.costtd{
 	text-align: right;
@@ -1392,8 +1386,8 @@ span.totalCostText, span.totalCost {
     color: #83C99F;
 }
 .cPagination>.active>a, .cPagination>.active>a:focus, .cPagination>.active>a:hover, .cPagination>.active>span, .cPagination>.active>span:focus, .cPagination>.active>span:hover {
-    background-color: #629976;
-    border-color: rgba(98, 153, 118, 0.62);
+       background-color: #06728D;
+    border-color: rgb(83, 161, 218);
 }
 .cPagination>li>a:focus, .cPagination>li>a:hover, .cPagination>li>span:focus, .cPagination>li>span:hover {
     color: #FFFFFF;
@@ -1405,4 +1399,19 @@ span.totalCostText, span.totalCost {
 }
 .float_right {
 	float: right;
+}
+.0Padding {
+	padding: 0;
+}
+label.cost {
+	    color: #C0272D;
+    font-weight: 700;
+    font-size: 13px;
+}
+.add_new_add h3 {
+    font-size: 18px;
+    color: #06728D;
+}
+.ad_heading {
+    color: #06728D;
 }

@@ -5,6 +5,10 @@ use App\Http\Controllers\BaseController;
 
 use Illuminate\Http\Request;
 
+use App\ClassicAd;
+use App\UserClassicAd;
+use App\Location;
+
 class ClassifiedAdController extends BaseController {
 
 
@@ -17,6 +21,9 @@ class ClassifiedAdController extends BaseController {
     	parent::__construct();
         $this->view_data['view_path_root'] = 'page.classified-ad'; 
     	$this->view_data['page_title'] = $this->view_data['page_title'] .' - Classified Ad';
+
+    	$this->view_data['heading'] = 'Classified Ads';
+		$this->view_data['sub_heading'] = 'Select from the following ads and view/post your ad!';
     	
     }
 	
@@ -27,6 +34,8 @@ class ClassifiedAdController extends BaseController {
 	 */
 	public function index()
 	{
+		
+		$this->view_data['classic_ads'] = ClassicAd::active()->orderBy('number_in_row')->get();
 		return view($this->view_data['view_path_root'].'.index', $this->view_data);
 	}
 
@@ -56,9 +65,16 @@ class ClassifiedAdController extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($slug)
 	{
-		//
+		$this->view_data['classic_ad'] = ClassicAd::findBySlug($slug);
+		$this->view_data['user_classic_ads'] = $this->view_data['classic_ad']->userClassicAds;
+		
+		$this->view_data['heading'] = $this->view_data['classic_ad']->title;
+
+		$this->view_data['locations'] = Location::active()->orderBy('location')->lists('location', 'id');
+
+		return view($this->view_data['view_path_root'].'.show', $this->view_data);
 	}
 
 	/**
