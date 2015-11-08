@@ -31,7 +31,7 @@ class ClassicAd extends Model {
 	 * @var object
 	 */
 	public function benefits(){	
-		return $this->hasMany('App\ClassicAdBenefits');
+		return $this->hasMany('App\ClassicAdBenefit');
 	}
 
 	/**
@@ -40,7 +40,7 @@ class ClassicAd extends Model {
 	 * @var object
 	 */
 	public function conditions(){	
-		return $this->hasMany('App\ClassicAdConditions');
+		return $this->hasMany('App\ClassicAdCondition');
 	}
 
 	/**
@@ -49,7 +49,7 @@ class ClassicAd extends Model {
 	 * @var object
 	 */
 	public function processes(){	
-		return $this->hasMany('App\ClassicAdProcesses');
+		return $this->hasMany('App\ClassicAdProcess');
 	}
 
 	/**

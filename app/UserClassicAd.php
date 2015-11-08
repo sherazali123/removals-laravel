@@ -16,7 +16,7 @@ class UserClassicAd extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['title', 'slug', 'location_id', 'advertiser_email', 'advertiser_name', 'advertiser_telephone', 'month', 'year', 'status', 'classic_ad_id', 'description', 'process'];
+	protected $fillable = ['title', 'slug', 'location_id', 'advertiser_email', 'advertiser_name', 'advertiser_telephone', 'month', 'year', 'status', 'classic_ad_id', 'description'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -43,6 +43,22 @@ class UserClassicAd extends Model {
 		return $this->belongsTo('App\Location');
 	}
 
-	
+	/**
+	 * The user classic ads images associated with specific ad
+	 *
+	 * @var object
+	 */
+	public function images(){	
+		return $this->hasMany('App\UserClassicAdImage');
+	}
+
+	/**
+	 * Scope: find ad by value of slug (which is unique)
+	 *
+	 * @var collection
+	 */
+	public function scopeFindBySlug($query, $slug){	
+		return $query->where('slug', '=', $slug)->first();
+	}
 
 }

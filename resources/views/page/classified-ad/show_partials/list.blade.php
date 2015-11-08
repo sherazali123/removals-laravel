@@ -3,13 +3,13 @@
             <div class="row tableHeader">
                
                 <div class="col-md-3">
-                    <a href="add_moving_day.html" class="btn_1 medium">Add new ad</a> 
+                    <a href="{{ URL::to('classified-ad/create').'?ad='.$classic_ad->slug }}" class="btn_1 medium">Add new ad</a> 
                 </div>
                 <div class="col-md-3">
                     
                 </div>
                 <div class="col-md-3">
-                {!! Form::select('Select location', array('default' => 'Select Location') + $locations, null, ['class' => 'form-control required', 'name' => 'location']) !!}
+                {!! Form::select('location', array('' => 'Select Location') + $locations, null, ['class' => 'form-control required', 'name' => 'location']) !!}
                 </div>
                 <div class="col-md-3">
                     <input type="text" placeholder="Search here" class="form-control" id="search" name="search">
@@ -26,6 +26,9 @@
                                 <th>Location</th>
                                 <th>Moving day</th>
                                 <th>Advertiser</th>
+                                @if($classic_ad->type == 1)
+                                 <th>Picture</th>
+                                @endif
                                 <th>Ad title</th>
                                 <th>Last post</th>
                                 <th></th>
@@ -39,6 +42,10 @@
                                 <td>{{ $ad->location->location }}</td>
                                 <td>{{ $ad->year.'.'.$ad->month }}</td>
                                 <td>{{ $ad->advertiser_name }}</td>
+                                @if($classic_ad->type == 1)
+                                    <?php $first_image = $ad->images()->first(); ?>
+                                    <td><img src="{{ asset($first_image->image) }}" width="20" height="20" /></td>
+                                @endif
                                 <td>{{ $ad->title }}</td>
                                 <td>{{ Carbon\Carbon::parse($ad->created_at)->format('d.m.Y')  }}</td>
                                 <td><a href="#"><i class="icon-search-circled"></i><span class="i-name">View</span></a></td>

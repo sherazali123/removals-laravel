@@ -2,12 +2,18 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+
 use App\User;
+
 use App\Location;
 use App\ClassicAd;
+
 use App\ClassicAdBenefit;
 use App\ClassicAdCondition;
 use App\ClassicAdProcess;
+
+use App\RentalService;
+use App\PurchaseService;
 
 class DatabaseSeeder extends Seeder {
 
@@ -23,6 +29,9 @@ class DatabaseSeeder extends Seeder {
 	    $this->call('UserTableSeeder');
 
         $this->call('LocationTableSeeder');
+
+        $this->call('RentalServicesTableSeeder');
+        $this->call('PurchaseServicesTableSeeder');
 
 	    $this->call('ClassicAdTableSeeder');
 	}
@@ -61,6 +70,48 @@ class LocationTableSeeder extends Seeder {
 
 }
 
+
+
+
+/**
+  * Seed Rental services
+  *
+  */
+
+class RentalServicesTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('rental_services')->delete();
+
+        RentalService::create(['number_in_row' => 1,'title' => 'Boxes', 'price' => 100, 'image' => 'boxes.png', 'status' => 0]);
+        RentalService::create(['number_in_row' => 2,'title' => 'Boxes with books', 'price' => 200, 'image' => 'boxes_with_books.png', 'status' => 0]);
+        RentalService::create(['number_in_row' => 3,'title' => 'Moving cart', 'price' => 250, 'image' => 'cart.png', 'status' => 0]);
+        RentalService::create(['number_in_row' => 4,'title' => 'Single bed cover', 'price' => 500, 'image' => 'single_bed.png', 'status' => 0]);
+        RentalService::create(['number_in_row' => 5,'title' => 'Double bed cover', 'price' => 700, 'image' => 'double_bed.png', 'status' => 0]);
+        RentalService::create(['number_in_row' => 6,'title' => 'Queen bed cover', 'price' => 800, 'image' => 'queen_bed.png', 'status' => 0]);
+    }
+
+}
+
+/**
+  * Seed Purchase services
+  *
+  */
+
+class PurchaseServicesTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('purchase_services')->delete();
+
+        PurchaseService::create(['number_in_row' => 1,'title' => 'Moving Tape', 'price' => 100, 'image' => 'tape.png', 'status' => 0]);
+        PurchaseService::create(['number_in_row' => 2,'title' => 'Cardboard Boxes', 'price' => 250, 'image' => 'cardboard.png', 'status' => 0]);
+        PurchaseService::create(['number_in_row' => 3,'title' => 'Gloves', 'price' => 150, 'image' => 'gloves.png', 'status' => 0]);
+        PurchaseService::create(['number_in_row' => 4,'title' => 'Bubble Wraps', 'price' => 700, 'image' => 'bubble_wrap.png', 'status' => 0]);
+    }
+
+}
 /**
   * Seed User Table	
   *
@@ -76,7 +127,7 @@ class ClassicAdTableSeeder extends Seeder {
         DB::table('classic_ad_processes')->delete();
 
         $classic_ads = [
-        	['number_in_row' => 1, 'title' => 'Moving Day', 'slug' => 'moving-day', 'image' => 'moving_day.png', 'description' => 'MIK is now offering a quick and convenient service we call “Moving Day” where you can rent our movers to transport a few items across town. If you’re selling a couch or a TV and just need to transport it from one end of the city to the other, Moving Day is ideal for you. The same day service is very quick, convenient and affordable. The larger the group on Moving Day, the cheaper the costs',
+        	['number_in_row' => 1, 'type' => 0, 'title' => 'Moving Day', 'slug' => 'moving-day', 'image' => 'moving_day.png', 'description' => 'MIK is now offering a quick and convenient service we call “Moving Day” where you can rent our movers to transport a few items across town. If you’re selling a couch or a TV and just need to transport it from one end of the city to the other, Moving Day is ideal for you. The same day service is very quick, convenient and affordable. The larger the group on Moving Day, the cheaper the costs',
         		  	'benefits' => [
         																										
         						],
@@ -92,7 +143,7 @@ class ClassicAdTableSeeder extends Seeder {
         								['number_in_row' => 1, 'description' => 'Visit our website at <a href="http://www.moveinkorea.com" target="_blank">http://www.moveinkorea.com</a> and fill out a truck rental service form. (Please make sure that you have requested the last Sunday of the month.)'],																			
         							]
         	],
-        	['number_in_row' => 2, 'title' => 'City to City', 'slug' => 'city-to-city', 'image' => 'city_to_city.png', 'description' => 'MIK is now offering a reasonable and efficient service we call "City to City". Moving to another city, especially if the distance is very far from your current city, can be very costly. What if you could share the cost of moving with someone? Find your moving buddy and get a huge discount.',
+        	['number_in_row' => 2, 'type' => 0, 'title' => 'City to City', 'slug' => 'city-to-city', 'image' => 'city_to_city.png', 'description' => 'MIK is now offering a reasonable and efficient service we call "City to City". Moving to another city, especially if the distance is very far from your current city, can be very costly. What if you could share the cost of moving with someone? Find your moving buddy and get a huge discount.',
         		  	'benefits' => [
         								['number_in_row' => 1, 'description' => 'Huge discount (almost half price)'],																			
         						],
@@ -104,7 +155,7 @@ class ClassicAdTableSeeder extends Seeder {
         								['number_in_row' => 1, 'description' => 'Visit our website at <a href="http://www.moveinkorea.com" target="_blank">http://www.moveinkorea.com</a> and fill out the appropriate service form. Leave a message saying you would like to use City to City service in the Notes space. (Paid mover service customers cannot use this service.)'],																			
         							]
         	],
-        	['number_in_row' => 3, 'title' => 'Furniture', 'slug' => 'furniture', 'image' => 'furniture.png', 'description' => 'This space is used for selling or donating furniture. Do not post any items that are not related to furniture. If someone posts something unrelated to furniture, the post will be deleted, and the user will be banned.',
+        	['number_in_row' => 3, 'type' => 1, 'title' => 'Furniture', 'slug' => 'furniture', 'image' => 'furniture.png', 'description' => 'This space is used for selling or donating furniture. Do not post any items that are not related to furniture. If someone posts something unrelated to furniture, the post will be deleted, and the user will be banned.',
         		  	'benefits' => [
         						],
         			'conditions' => [
@@ -112,7 +163,7 @@ class ClassicAdTableSeeder extends Seeder {
         			'processes' => [
         							]
         	],
-        	['number_in_row' => 4, 'title' => 'Cell phone', 'slug' => 'cell-phone', 'image' => 'cell_phones.png', 'description' => 'This space is used for selling or donating cell phone. Do not post any items that are not related to cell phone. If someone posts something unrelated to cell phone, the post will be deleted, and the user will be banned.',
+        	['number_in_row' => 4, 'type' => 1, 'title' => 'Cell phone', 'slug' => 'cell-phone', 'image' => 'cell_phones.png', 'description' => 'This space is used for selling or donating cell phone. Do not post any items that are not related to cell phone. If someone posts something unrelated to cell phone, the post will be deleted, and the user will be banned.',
         		  	'benefits' => [
         						],
         			'conditions' => [
@@ -120,7 +171,7 @@ class ClassicAdTableSeeder extends Seeder {
         			'processes' => [
         							]
         	],
-        	['number_in_row' => 5, 'title' => 'Electronics', 'slug' => 'electronics', 'image' => 'electronics.png', 'description' => 'This space is used for selling or donating electronics. Do not post any items that are not related to electronics. If someone posts something unrelated to electronics, the post will be deleted, and the user will be banned.', 
+        	['number_in_row' => 5, 'type' => 1, 'title' => 'Electronics', 'slug' => 'electronics', 'image' => 'electronics.png', 'description' => 'This space is used for selling or donating electronics. Do not post any items that are not related to electronics. If someone posts something unrelated to electronics, the post will be deleted, and the user will be banned.', 
         		  	'benefits' => [
         						],
         			'conditions' => [
@@ -128,7 +179,7 @@ class ClassicAdTableSeeder extends Seeder {
         			'processes' => [
         							]
         	],
-        	['number_in_row' => 6, 'title' => 'Car and Bike', 'slug' =>  'car-and-bike', 'image' => 'car_and_bike.png', 'description' => 'This space is used for selling or donating car and bike. Do not post any items that are not related to car and bike. If someone posts something unrelated to car and bike, the post will be deleted, and the user will be banned.',
+        	['number_in_row' => 6, 'type' => 1, 'title' => 'Car and Bike', 'slug' =>  'car-and-bike', 'image' => 'car_and_bike.png', 'description' => 'This space is used for selling or donating car and bike. Do not post any items that are not related to car and bike. If someone posts something unrelated to car and bike, the post will be deleted, and the user will be banned.',
         		  	'benefits' => [
         						],
         			'conditions' => [
@@ -136,7 +187,7 @@ class ClassicAdTableSeeder extends Seeder {
         			'processes' => [
         							]
         	],
-        	['number_in_row' => 7, 'title' => 'Miscellaneous', 'slug' => 'miscellaneous', 'image' => 'miscellaneous.png', 'description' => 'This space is used for selling or donating items that are not listed in above categories. Do not post any illegal ads (drugs, sexual stuff). If someone posts an illegal ad, the post will be deleted, and the user will be banned.',
+        	['number_in_row' => 7, 'type' => 1, 'title' => 'Miscellaneous', 'slug' => 'miscellaneous', 'image' => 'miscellaneous.png', 'description' => 'This space is used for selling or donating items that are not listed in above categories. Do not post any illegal ads (drugs, sexual stuff). If someone posts an illegal ad, the post will be deleted, and the user will be banned.',
         		  	'benefits' => [
         						],
         			'conditions' => [
@@ -157,6 +208,7 @@ class ClassicAdTableSeeder extends Seeder {
         	$new_ad->slug = $ad['slug'];
         	$new_ad->image = $ad['image'];
         	$new_ad->description = $ad['description'];
+            $new_ad->type = $ad['type'];
         	$new_ad->save();
 
         	if(!empty($ad['benefits'])){

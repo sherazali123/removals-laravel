@@ -28,6 +28,7 @@ class CreateUserClassicAdsTable extends Migration {
 			$table->string('month',2);
 			$table->string('year',4);
 			$table->text('description');
+			$table->double('price', 10, 2)->nullable();
 			$table->integer('status')->default(0);
 			$table->integer('classic_ad_id')->unsigned();
 			$table->foreign('classic_ad_id')

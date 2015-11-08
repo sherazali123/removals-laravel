@@ -39,7 +39,11 @@
             <div class="row">
                 
                 <div class="col-md-12">
-                <form id="quotation" action="" method="POST" novalidate="novalidate">
+                {!! Form::open(array('url' => 'api/v1/box-rental',
+                                     'method' => 'POST', 
+                                     'class' => 'add_new_add', 
+                                     'novalidate' => 'novalidate',
+                                     'id' => 'box_rentel_form')) !!}
                     <div class="form_title">
                         <h3><strong><i class="icon-suitcase"></i></strong>Rental Services</h3>
                         <p>
@@ -48,170 +52,33 @@
                     </div>
                     <div class="step">
                             
-                            <div class="row text-center">
-                                <div class="col-md-2">
+                            <div class="row text-center ">
+                                @foreach($rental_services as $rental_service)
+                                    <div class="col-md-2 rental_services">
                                     <p>
-                                        <img src="img/services/rental/boxes.png" alt="" data-retina="true">
+                                        <img src="{{ asset('img/services/rental/'.$rental_service->image) }}" alt="{{ $rental_service->title }}" data-retina="true">
                                   </p>
                                     <div class="row">
                                         <div class="col-md-12 0Padding">
-                                            <label>Boxes</label>
+                                            <label>{{ $rental_service->title }}</label>
                                         </div>
                                         <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
+                                            <label class="sm-label cost">₩ {{ $rental_service->price }}</label>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="boxes_no" id="boxes_no">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
+                                        <div class="col-md-12 parentNode">
+                                        {!! Form::hidden('price', $rental_service->price) !!}
+                                            {!! Form::select($rental_service->id.'___rental', 
+                                                             $quantities, 0, 
+                                                          ['class' => 'serviceChanged form-control thumbnail_select required']) !!}
                                         </div>
                                         
                                     </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <p>
-                                        <img src="img/services/rental/boxes_with_books.png" alt="" data-retina="true">
-                                  </p>
-                                    <div class="row">
-                                        <div class="col-md-12 0Padding">
-                                            <label>Boxes with books</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
-                                        </div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="boxes_no" id="boxes_no">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-2">
-                                    <p>
-                                        <img src="img/services/rental/cart.png" alt="" data-retina="true">
-                                  </p>
-                                    <div class="row">
-                                        <div class="col-md-12 0Padding">
-                                            <label>Moving cart</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
-                                        </div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="moving_cart" id="moving_cart">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <p>
-                                        <img src="img/services/rental/single_bed.png" alt="" data-retina="true">
-                                  </p>
-                                    <div class="row">
-                                        <div class="col-md-12 0Padding">
-                                            <label>Single bed cover</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
-                                        </div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="single_bed_cover" id="single_bed_cover">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <p>
-                                        <img src="img/services/rental/double_bed.png" alt="" data-retina="true">
-                                  </p>
-                                    <div class="row">
-                                        <div class="col-md-12 0Padding">
-                                            <label>Double bed cover</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
-                                        </div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="double_bed_cover" id="double_bed_cover">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                    
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <p>
-                                        <img src="img/services/rental/queen_bed.png" alt="" data-retina="true">
-                                  </p>
-                                    <div class="row">
-                                        <div class="col-md-12 0Padding">
-                                            <label>Queen bed cover</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
-                                        </div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="queen_bed_cover" id="queen_bed_cover">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                            
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
+                                
                             
                         </div><!--End step -->
                     <div class="form_title">
@@ -223,114 +90,31 @@
                     <div class="step">
                             
                             <div class="row text-center">
+                                @foreach($purchase_services as $purchase_service)
+                                    <div class="col-md-2 purchase_services">
+                                    <p>
+                                        <img src="{{ asset('img/services/purchase/'.$purchase_service->image) }}" alt="{{ $purchase_service->title }}" data-retina="true">
+                                  </p>
+                                    <div class="row">
+                                        <div class="col-md-12 0Padding">
+                                            <label>{{ $purchase_service->title }}</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="sm-label cost">₩ {{ $purchase_service->price }}</label>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                        <div class="col-md-12 parentNode">
+                                            {!! Form::hidden('price', $purchase_service->price) !!}
+                                            {!! Form::select($purchase_service->id.'___purchase', 
+                                                             $quantities, 0, 
+                                                          ['class' => 'serviceChanged form-control thumbnail_select required']) !!}
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                @endforeach
                                 
-                                <div class="col-md-2">
-                                    <p>
-                                        <img src="img/services/purchase/tape.png" alt="" data-retina="true">
-                                  </p>
-                                    <div class="row">
-                                        <div class="col-md-12 0Padding">
-                                            <label>Moving Tape</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
-                                        </div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="moving_cart" id="moving_cart">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <p>
-                                        <img src="img/services/purchase/cardboard.png" alt="" data-retina="true">
-                                  </p>
-                                    <div class="row">
-                                        <div class="col-md-12 0Padding">
-                                            <label>Cardboard Boxes</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
-                                        </div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="single_bed_cover" id="single_bed_cover">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <p>
-                                        <img src="img/services/purchase/gloves.png" alt="" data-retina="true">
-                                  </p>
-                                    <div class="row">
-                                        <div class="col-md-12 0Padding">
-                                            <label>Gloves</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
-                                        </div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="double_bed_cover" id="double_bed_cover">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <p>
-                                        <img src="img/services/purchase/bubble_wrap.png" alt="" data-retina="true">
-                                  </p>
-                                    <div class="row">
-                                        <div class="col-md-12 0Padding">
-                                            <label>Bubble Wraps</label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="sm-label cost">₩ 100</label>
-                                        </div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <select class="form-control thumbnail_select required" name="queen_bed_cover" id="queen_bed_cover">
-                                                <option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             
                         </div><!--End step -->
@@ -348,23 +132,23 @@
                                         <tbody>
                                           <tr>
                                             <td class="sText">Rental Deposit Total</td>
-                                            <td class="costtd">₩ 100</td>
+                                            <td class="costtd">₩ <span id="br_rental_deposit_total"> {{ $cost['rental_deposit_total'] }}</span></td>
                                           </tr>
                                           <tr>
                                             <td class="sText">Purchase Service Total</td>
-                                            <td class="costtd">₩ 100</td>
+                                            <td class="costtd">₩ <span id="br_purchase_deposit_total"> {{ $cost['purchase_deposit_total'] }}</span></td>
                                           </tr>
                                           <tr>
                                             <td class="sText">Delivery Fee</td>
-                                            <td class=" costtd">₩ 100</td>
+                                            <td class=" costtd">₩ <span id="br_delivery_fee"> {{ $cost['delivery_fee'] }}</span></td>
                                           </tr>
                                           <tr>
                                             <td class=" sText">Total Amount Due</td>
-                                            <td class=" costtd">₩ 100</td>
+                                            <td class=" costtd">₩ <span id="br_total_amount_due"> {{ $cost['total_amount_due'] }}</span></td>
                                           </tr>
                                           <tr>
                                             <td class=" sText">Refund</td>
-                                            <td class=" costtd">₩ 100</td>
+                                            <td class=" costtd">₩ <span id="br_refund"> {{ $cost['refund'] }}</span></td>
                                           </tr>
                                         </tbody>
                                 </table>
@@ -385,28 +169,36 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
-                                        <label>Preffered Delievery Address</label>
-                                        <input type="text" id="preferred_delivery_address" name="preferred_delivery_address" class="form-control required">
+                                        {!! Form::label('Preffered Delievery Address') !!}
+                                        {!! Form::text('preferred_delivery_address', null, 
+                                                                    array(null, 
+                                                                          'class'=>'form-control required')) !!}
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-4 col-sm-4">
                                     <div class="form-group">
-                                        <label>Building Name</label>
-                                        <input type="text" id="building_name" name="building_name" class="form-control required">
+                                        {!! Form::label('Building Name') !!}
+                                        {!! Form::text('building_name', null, 
+                                                                    array(null, 
+                                                                          'class'=>'form-control required')) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="form-group">
-                                        <label>Room No.</label>
-                                        <input type="text" id="room_no" name="room_no" class="form-control required">
+                                        {!! Form::label('Room No.') !!}
+                                        {!! Form::text('room_no', null, 
+                                                                    array(null, 
+                                                                          'class'=>'form-control number required')) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="form-group">
-                                        <label>Phone No.</label>
-                                        <input type="text" id="phone_no" name="phone_no" class="form-control required">
+                                        {!! Form::label('Phone No.') !!}
+                                        {!! Form::text('phone_no', null, 
+                                                                    array(null, 
+                                                                          'class'=>'form-control number required')) !!}
                                     </div>
                                 </div>
                             </div>
@@ -425,29 +217,36 @@
                             <div class="row add_bottom_45">
                                 <div class="col-md-4 col-sm-4">
                                     <div class="form-group">
-                                        <label>Bank</label>
-                                        <input type="text" id="bank_name" name="bank_name" class="form-control required">
+                                        {!! Form::label('Bank') !!}
+                                        {!! Form::text('bank_name', null, 
+                                                                    array(null, 
+                                                                          'class'=>'form-control required')) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="form-group">
-                                        <label>Account no.</label>
-                                        <input type="text" id="account_no" name="account_no" class="form-control required">
+                                        {!! Form::label('Account no.') !!}
+                                        {!! Form::text('account_no', null, 
+                                                                    array(null, 
+                                                                          'class'=>'form-control required')) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="form-group">
-                                        <label>Name of Receiver</label>
-                                        <input type="text" id="reveiver_name" name="reveiver_name" class="form-control required">
+                                        {!! Form::label('Name of Receiver') !!}
+                                        {!! Form::text('reveiver_name', null, 
+                                                                    array(null, 
+                                                                          'class'=>'form-control required')) !!}
                                     </div>
                                 </div>
                                 
                             </div>
-                            <button type="submit" class="btn_1 medium">Order</button> 
+                            {!! Form::submit('Order', 
+                                            array('class'=>'btn_1 medium')) !!}
                         </div><!--End step -->
                        
             
-                    </form>
+                    {!! Form::close() !!}
                 </div><!-- End col-md-12 -->
                 
             </div><!-- End row -->

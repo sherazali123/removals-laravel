@@ -20,23 +20,23 @@
                                     <tbody>
                                       <tr>
                                         <td class="sText">Rental Deposit Total</td>
-                                        <td class="costtd">₩ 100</td>
+                                        <td  class="costtd">₩ <span id="confirm_rental_deposit_total"> </span></td>
                                       </tr>
                                       <tr>
                                         <td class="sText">Purchase Service Total</td>
-                                        <td class="costtd">₩ 100</td>
+                                        <td class="costtd">₩ <span id="confirm_purchase_deposit_total"> </span></td>
                                       </tr>
                                       <tr>
                                         <td class="sText">Delivery Fee</td>
-                                        <td class=" costtd">₩ 100</td>
+                                        <td class=" costtd">₩ <span id="confirm_delivery_fee"> </span></td>
                                       </tr>
                                       <tr>
                                         <td class=" sText">Total Amount Due</td>
-                                        <td class=" costtd">₩ 100</td>
+                                        <td class=" costtd">₩ <span id="confirm_total_amount_due"> </span></td>
                                       </tr>
                                       <tr>
                                         <td class=" sText">Refund</td>
-                                        <td class=" costtd">₩ 100</td>
+                                        <td class=" costtd">₩ <span id="confirm_refund"> </span></td>
                                       </tr>
                                     </tbody>
                             </table>
@@ -47,7 +47,7 @@
                     <div class="col-md-4">
                         <div class="input-group">
                           <span class="input-group-addon totalCostText">Total Cost</span>
-                          <span class="input-group-addon totalCost">₩ 500</span>
+                          <span class="input-group-addon totalCost">₩ <span id="confirm_total_cost"> </span></span>
                         </div>
                      </div>
                     <div class="col-md-4"> </div>

@@ -21,7 +21,7 @@ class BaseController extends Controller {
      */
     public function __construct() {
         
-        $this->view_data['page_title'] = 'Korea Moving Services';
+        $this->view_data['page_title'] = 'Move in Korea';
 
         self::MetaData();
     }

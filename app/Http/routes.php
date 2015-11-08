@@ -11,13 +11,18 @@
 |
 */
 
-Route::get('/', 'Page\QuatationController@index');
 
-Route::get('home', 'Page\QuationController@index');
+Route::get('/', 'HomeController@index');
+
+Route::get('home', 'HomeController@index');
+
+Route::get('/quotation', 'Page\QuatationController@index');
 
 Route::get('box-rental', 'Page\BoxRentalController@index');
 
 Route::resource('classified-ad', 'Page\ClassifiedAdController');
+
+Route::get('classified-ad/view/{classic_ad_slug}/{user_classic_ad_slug}', 'Page\ClassifiedAdController@showSingleAd');
 
 Route::get('blog', 'Blog\IndexController@index');
 
@@ -31,6 +36,8 @@ Route::group(['prefix' => 'api'], function()
 	{
 		Route::resource('quation', 'Api\v1\QuatationController');
 		Route::resource('box-rental', 'Api\v1\BoxRentalController');
+		Route::post('box-rental-email', 'Api\v1\BoxRentalController@email');
+
 		Route::resource('classified-ad', 'Api\v1\ClassifiedAdController');
 	});	
 });

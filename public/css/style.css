@@ -539,11 +539,18 @@ ul.feat#about{
 ul.feat#about li{
 	margin-bottom:20px;
 	padding:10px 20px 0 90px;
-	border:1px solid #d3eddc;
-	background-color:#edf8f1;
+	color: #fff;
+    border: 1px solid #337ab7;
+    background-color: #31708f;
 }
 ul.feat#about li h4{
-	color:#629976;
+	color:#fcf8e3;
+}
+ul.feat#about li h4 a{
+	color:#fcf8e3;
+}
+ul.feat#about li h4 a:hover, a:focus {
+    color: rgba(252, 248, 227, 0.65);
 }
 ul.feat#about li p{
 	margin-bottom:20px;
@@ -1414,4 +1421,7 @@ label.cost {
 }
 .ad_heading {
     color: #06728D;
+}
+p.errors {
+	color: red;
 }

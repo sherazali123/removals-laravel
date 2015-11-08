@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClassicAdsTable extends Migration {
+class CreateRentalServicesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,15 +12,13 @@ class CreateClassicAdsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('classic_ads', function(Blueprint $table)
+		Schema::create('rental_services', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('number_in_row');
 			$table->string('title',100);
-			$table->string('slug',200)->unique();
 			$table->string('image',150);
-			$table->integer('type')->default(0);
-			$table->text('description');
+			$table->double('price', 10, 2)->nullable();
 			$table->integer('status')->default(0);
 			$table->timestamps();
 		});
@@ -33,7 +31,7 @@ class CreateClassicAdsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('classic_ads');
+		Schema::drop('rental_services');
 	}
 
 }

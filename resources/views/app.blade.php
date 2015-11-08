@@ -14,7 +14,7 @@
     @if(isset($page_title))
     	<title>{{ $page_title }}</title>
     @else
-    	<title>Korea Moving Services</title>
+    	<title>Move in Korea</title>
     @endif
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
