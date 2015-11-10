@@ -61,4 +61,25 @@ class UserClassicAd extends Model {
 		return $query->where('slug', '=', $slug)->first();
 	}
 
+	/**
+	 * Scope: search ads by location 
+	 *
+	 * @var collection
+	 */
+	public function scopeSearchLocation($query, $location_id){
+		if($location_id){
+			return $query->where('location_id', '=', $location_id);
+		}
+	}
+	/**
+	 * Scope: search ads by location 
+	 *
+	 * @var collection
+	 */
+	public function scopeSearchText($query, $text){
+		if($text){
+			return $query->where('title', 'LIKE', '%'.$text.'%')->orWhere('description', 'LIKE', '%'.$text.'%')->orWhere('advertiser_name', 'LIKE', '%'.$text.'%');
+		}
+	}
+
 }

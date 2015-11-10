@@ -79,14 +79,36 @@ class ClassifiedAdController extends BaseController {
 	 */
 	public function show($slug)
 	{
+		$this->view_data['page_size'] = (int) Config::get('constants.general')['page_size'];
+
+		$this->view_data['offset'] = (int) Input::get('offset', 0);
+		$this->view_data['ajax'] = (bool) Input::get('ajax', false);
+
+		if($this->view_data['offset'] < 0) {
+			$this->view_data['offset'] = 0;
+		}
+
+		$this->view_data['page_no'] = $this->view_data['offset'] + 1;
+
+		$search_query = Input::get('search_query', false);
+		$location = Input::get('location', false);
+
+		// var_dump($page_size, $page_no, $search_query);die;
+
 		$this->view_data['classic_ad'] = ClassicAd::findBySlug($slug);
 
-		$this->view_data['user_classic_ads'] = $this->view_data['classic_ad']->userClassicAds()->orderBy('created_at', 'desc')->get();
-		
+		$this->view_data['result_count'] = $this->view_data['classic_ad']->userClassicAds()->searchLocation($location)->searchText($search_query)->orderBy('created_at', 'desc')->count();
+
+		$this->view_data['user_classic_ads'] = $this->view_data['classic_ad']->userClassicAds()->searchLocation($location)->searchText($search_query)->orderBy('created_at', 'desc')->take($this->view_data['page_size'])->skip($this->view_data['offset'] * $this->view_data['page_size'])->get();
+		// echo count($this->view_data['user_classic_ads']);die;
+
 		$this->view_data['heading'] = $this->view_data['classic_ad']->title;
 
 		$this->view_data['locations'] = Location::active()->orderBy('location')->lists('location', 'id');
-
+		if($this->view_data['ajax'] == true) {
+			$returnHTML = view($this->view_data['view_path_root'].'.show_partials.list', $this->view_data)->render();
+			return response()->json(array('status' => 200, 'html'=>$returnHTML));
+		}
 		return view($this->view_data['view_path_root'].'.show', $this->view_data);
 	}
 

@@ -63,5 +63,6 @@ return [
     'general' => [
         'delivery_fee' => 200,
         'refund' => 100,
+        'page_size' => 1,
     ]
 ];

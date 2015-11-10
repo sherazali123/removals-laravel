@@ -1,20 +1,4 @@
-<div class="container margin_60">
-        
-            <div class="row tableHeader">
-               
-                <div class="col-md-3">
-                    <a href="{{ URL::to('classified-ad/create').'?ad='.$classic_ad->slug }}" class="btn_1 medium">Add new ad</a> 
-                </div>
-                <div class="col-md-3">
-                    
-                </div>
-                <div class="col-md-3">
-                {!! Form::select('location', array('' => 'Select Location') + $locations, null, ['class' => 'form-control required', 'name' => 'location']) !!}
-                </div>
-                <div class="col-md-3">
-                    <input type="text" placeholder="Search here" class="form-control" id="search" name="search">
-                </div>
-            </div>    
+
             <div class="row">
                
                 <div class="col-md-12">
@@ -53,19 +37,9 @@
                               @endforeach
                             </tbody>
                     </table>
-                    <nav class="text-right">
-                      <ul class="pagination cPagination">
-                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                     </ul>
-                   </nav>    
+                    @include('application.paginator', ['offset' => $offset, 'page_no' => $page_no, 'page_size' => $page_size, 'count' => $result_count, 'result_list' => $user_classic_ads])    
                 </div>
             </div><!-- End row -->
             
            
-        </div>
+        
