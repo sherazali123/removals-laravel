@@ -18,6 +18,7 @@
                                 <th></th>
                               </tr>
                             </thead>
+                            
                             <tbody>
                               <?php $index = count($user_classic_ads); ?>
                               @foreach($user_classic_ads as $ad)
@@ -32,7 +33,7 @@
                                 @endif
                                 <td>{{ $ad->title }}</td>
                                 <td>{{ Carbon\Carbon::parse($ad->created_at)->format('d.m.Y')  }}</td>
-                                <td><a href="#"><i class="icon-search-circled"></i><span class="i-name">View</span></a></td>
+                                <td><a href="{{ URL::to('classified-ad/view').'/'.$classic_ad->slug.'/'.$ad->slug }}"><i class="icon-search-circled"></i><span class="i-name">View</span></a></td>
                               </tr>
                               @endforeach
                             </tbody>

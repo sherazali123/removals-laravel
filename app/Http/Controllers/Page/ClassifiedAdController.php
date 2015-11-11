@@ -120,14 +120,11 @@ class ClassifiedAdController extends BaseController {
 	public function showSingleAd($classic_ad_slug, $user_classic_ad_slug)
 	{
 		$this->view_data['classic_ad'] = ClassicAd::findBySlug($classic_ad_slug);
-		$this->view_data['user_classic_ad_slug'] = UserClassicAd::findBySlug($user_classic_ad_slug);
+		$this->view_data['user_classic_ad'] = UserClassicAd::findBySlug($user_classic_ad_slug);
 
-		$this->view_data['heading'] = $this->view_data['user_classic_ad_slug']->title;
-		$this->view_data['sub_heading'] = 'Added By <strong>'.$this->view_data['user_classic_ad_slug']->advertiser_name.'</strong>';
+		$this->view_data['heading'] = $this->view_data['user_classic_ad']->title;
+		$this->view_data['sub_heading'] = 'Added By <strong>'.$this->view_data['user_classic_ad']->advertiser_name.'</strong>';
 
-		$this->view_data['locations'] = Location::active()->orderBy('location')->lists('location', 'id');
-		$this->view_data['months'] = Config::get('constants.months');
-		$this->view_data['years'] = Config::get('constants.years');
 
 		return view($this->view_data['view_path_root'].'.single_ad', $this->view_data);
 	}
