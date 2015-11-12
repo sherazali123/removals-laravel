@@ -63,21 +63,6 @@
 
     <!-- Header================================================== -->
     <header>
-        <div id="top_line">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                    <span id="tag_line">"The art of moving since 1998"</span>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                        <ul id="top_links">
-                             <li><a href="{{ url('') }}">EMAIL US </a></li>
-                            <li><a href="mailto:info@removals.com">suggest@korearemovals.com</a></li>
-                        </ul>
-                    </div>
-                </div><!-- End row -->
-            </div><!-- End container-->
-        </div><!-- End top line-->
         
         <div class="container">
             <div class="row">
@@ -95,7 +80,7 @@
                         <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
                         <ul>
                             <li class="submenu">
-                                <a href="{{ url('/') }}">Quation </a>
+                                <a href="{{ url('/') }}">Quotation </a>
                             </li>
                             <li class="submenu">
                                 <a href="{{ url('/box-rental') }}" >Box Rental </a>
@@ -121,24 +106,9 @@
 	@yield('content')
 
 
-	<footer><!-- Footer Start -->
+	<footer class="home_footer"><!-- Footer Start -->
         <div class="container">
-            <div class="row ">
-                <div class="col-md-3 col-md-offset-1 col-sm-3">
-                	<p>Company : Move in Korea<p>
-					<p>Business License : 123-45-678910<p>
-                </div>
-                <div class="col-md-3 col-md-offset-1 col-sm-3">
-                    <p>President of Company : Dexter Park</p>
-					<p>Kakaotalk : Dexter Park</p> <!-- Test comment  -->
-                </div>
-              <div class="col-md-3 col-md-offset-1 col-sm-3" id="contact_bg">
-                
-                   <p>Phone Number : <a href="tel://01022147112">010 2214 7112</a></p>
-                   <p>Email : <a href="mailto:dexterpark83@gmail.com">dexterpark83@gmail.com</a></p>            
-                 </div>
-            </div><!-- End row -->
-             <div id="social_footer" >
+             <div id="social_footer" class="social_footer">
                         <ul>
                             <li><a href="#"><i class="icon-facebook"></i></a></li>
                             <li><a href="#"><i class="icon-twitter"></i></a></li>
