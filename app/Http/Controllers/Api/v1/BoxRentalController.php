@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use Config;
+use Mail;
 
 use App\RentalService;
 use App\PurchaseService;
@@ -178,6 +179,11 @@ class BoxRentalController extends Controller {
 		$res['errors'] = [];
 
 		$input = $request->all();
+
+
+		Mail::send('emails.box_rental', $input, function ($m) {
+            $m->to(Config::get('constants.admin')['email'], Config::get('constants.admin')['name'])->subject('Box Rental');
+        });
 
 		$res['status'] = 200;
 
