@@ -9,6 +9,7 @@ use Config;
 use Validator;
 use Redirect;
 use Session;
+use Mail;
 
 use App\ClassicAd;
 use App\UserClassicAd;
@@ -39,7 +40,10 @@ class ClassifiedAdController extends BaseController {
 	 */
 	public function index()
 	{
-		
+		// Mail::send('emails.box_rental', [], function ($m) {
+  //           $m->to('sheraz.ali342@gmail.com', 'Sheraz Ali')->subject('Your Reminder!');
+  //       });
+
 		$this->view_data['classic_ads'] = ClassicAd::active()->orderBy('number_in_row')->get();
 		return view($this->view_data['view_path_root'].'.index', $this->view_data);
 	}

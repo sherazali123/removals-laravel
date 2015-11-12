@@ -64,5 +64,9 @@ return [
         'delivery_fee' => 200,
         'refund' => 100,
         'page_size' => 1,
-    ]
+    ],
+    'admin' => [
+        'email' => 'sheraz.ali342@gmail.com',
+        'name' => 'Admin - Move In Korea'
+    ],
 ];

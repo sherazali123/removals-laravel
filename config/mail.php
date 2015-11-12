@@ -15,7 +15,7 @@ return [
 	|
 	*/
 
-	'driver' => env('MAIL_DRIVER', 'smtp'),
+	'driver' => env('MAIL_DRIVER', 'mailgun'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => null, 'name' => null],
+	'from' => ['address' => env('MAIL_USERNAME', 'sheraz.ali342@gmail.com'), 'name' => env('MAIL_FROM_NAME', 'Move In Korea')],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
 	|
 	*/
 
-	'username' => env('MAIL_USERNAME'),
+	'username' => env('MAIL_USERNAME', 'postmaster@sandbox19a438a8237648558bc4de47225317b9.mailgun.org'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
 	|
 	*/
 
-	'password' => env('MAIL_PASSWORD'),
+	'password' => env('MAIL_PASSWORD', '90b770f80d1c4eba1bbf9bc08870e0ef'),
 
 	/*
 	|--------------------------------------------------------------------------
