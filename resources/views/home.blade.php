@@ -1,4 +1,4 @@
-@extends('app')
+@extends('home_layout')
 
 
 @section('headercss')
