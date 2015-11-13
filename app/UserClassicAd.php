@@ -71,6 +71,7 @@ class UserClassicAd extends Model {
 			return $query->where('location_id', '=', $location_id);
 		}
 	}
+	
 	/**
 	 * Scope: search ads by location 
 	 *

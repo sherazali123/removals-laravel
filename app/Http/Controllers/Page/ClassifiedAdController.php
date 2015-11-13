@@ -86,6 +86,7 @@ class ClassifiedAdController extends BaseController {
 		$this->view_data['page_size'] = (int) Config::get('constants.general')['page_size'];
 
 		$this->view_data['offset'] = (int) Input::get('offset', 0);
+
 		$this->view_data['ajax'] = (bool) Input::get('ajax', false);
 
 		if($this->view_data['offset'] < 0) {
@@ -113,6 +114,7 @@ class ClassifiedAdController extends BaseController {
 			$returnHTML = view($this->view_data['view_path_root'].'.show_partials.list', $this->view_data)->render();
 			return response()->json(array('status' => 200, 'html'=>$returnHTML));
 		}
+		// $this->printArray($this->view_data);die;
 		return view($this->view_data['view_path_root'].'.show', $this->view_data);
 	}
 

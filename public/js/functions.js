@@ -34,12 +34,12 @@ $('a.show-submenu-mega').on("click",function() {
 });
 
 $(window).on('resize load',function(){
-if( $(this).width() < 480 )
-{
-	$('a.open_close').on("click",function() {
-	$('.cmn-toggle-switch').removeClass('active')
-});
-}
+  if( $(this).width() < 480 )
+  {
+  	$('a.open_close').on("click",function() {
+  	$('.cmn-toggle-switch').removeClass('active')
+  });
+  }
 });
 
 /* ==============================================
