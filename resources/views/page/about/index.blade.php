@@ -9,7 +9,6 @@
     
             <div id="intro">
                 <img src="{{ asset('img/about_1.jpg') }}" alt="" class="img-responsive">
-                <img src="{{ asset('img/logo_web.jpg') }}" alt="" class="add_bottom_15">
                 <h2>We are "Move in Korea"</h2>
                 <p>
                     {{ $text }}
