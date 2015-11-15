@@ -15,6 +15,8 @@ use App\ClassicAdProcess;
 use App\RentalService;
 use App\PurchaseService;
 
+use App\Item;
+
 class DatabaseSeeder extends Seeder {
 
 	/**
@@ -29,6 +31,8 @@ class DatabaseSeeder extends Seeder {
 	    $this->call('UserTableSeeder');
 
         $this->call('LocationTableSeeder');
+
+        $this->call('ItemTableSeeder');
 
         $this->call('RentalServicesTableSeeder');
         $this->call('PurchaseServicesTableSeeder');
@@ -112,6 +116,60 @@ class PurchaseServicesTableSeeder extends Seeder {
     }
 
 }
+
+/**
+  * Seed Items
+  *
+  */
+
+class ItemTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('items')->delete();
+
+        $items = array(
+                array('number_in_row' => 1, 'title' => 'Small Box', 'image' => '/img/design-img/items/1.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 2, 'title' => 'Big Box', 'image' => '/img/design-img/items/2.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 3, 'title' => 'Small Luggage (less than 20 inch)', 'image' => '/img/design-img/items/3.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 4, 'title' => 'Big Luggage (more than 20 inch)', 'image' => '/img/design-img/items/4.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 5, 'title' => 'Small Shelf (one person moveable)', 'image' => '/img/design-img/items/5.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 6, 'title' => 'Big Shelf (two person moveable)', 'image' => '/img/design-img/items/6.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 7, 'title' => 'TV Stand', 'image' => '/img/design-img/items/7.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 8, 'title' => 'King Bed (two person moveable)', 'image' => '/img/design-img/items/8.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 9, 'title' => 'Queen Bed (two person moveable)', 'image' => '/img/design-img/items/9.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 10, 'title' => 'Single Bed (one person moveable)', 'image' => '/img/design-img/items/10.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 11, 'title' => 'Wardrobe', 'image' => '/img/design-img/items/11.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 12, 'title' => 'Small Drawer (one person moveable)', 'image' => '/img/design-img/items/12.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 13, 'title' => 'Big Drawer (two person moveable)', 'image' => '/img/design-img/items/13.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 14, 'title' => 'Chair', 'image' => '/img/design-img/items/14.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 15, 'title' => '1 Seater (one person moveable)', 'image' => '/img/design-img/items/15.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 16, 'title' => '2 Seater (two person moveable)', 'image' => '/img/design-img/items/16.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 17, 'title' => 'Dressing Table', 'image' => '/img/design-img/items/17.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 18, 'title' => 'Desks & Table (one person moveable)', 'image' => '/img/design-img/items/18.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 19, 'title' => 'Desk & Table (two person moveable)', 'image' => '/img/design-img/items/19.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 20, 'title' => 'Small Cabinet', 'image' => '/img/design-img/items/20.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 21, 'title' => 'Big Cabinet (two person moveable)', 'image' => '/img/design-img/items/21.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 22, 'title' => 'Small Refrigerator', 'image' => '/img/design-img/items/22.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 23, 'title' => 'Big Refrigerator', 'image' => '/img/design-img/items/23.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 24, 'title' => '2-Door Refrigerator', 'image' => '/img/design-img/items/24.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 25, 'title' => 'Small TV', 'image' => '/img/design-img/items/25.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 26, 'title' => 'Big TV', 'image' => '/img/design-img/items/26.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 27, 'title' => 'Wall TV', 'image' => '/img/design-img/items/27.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 28, 'title' => 'Laptop/Computer', 'image' => '/img/design-img/items/28.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 29, 'title' => 'Washing Machine', 'image' => '/img/design-img/items/29.png', 'type' => 0, 'status' => 0),
+                array('number_in_row' => 30, 'title' => 'Microwave', 'image' => '/img/design-img/items/30.png', 'type' => 0, 'status' => 0),
+            );
+            
+
+            foreach ($items as $item) {
+                Item::create($item);
+            }
+
+    }
+
+}
+
 /**
   * Seed User Table	
   *

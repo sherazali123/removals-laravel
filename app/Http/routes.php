@@ -34,7 +34,7 @@ Route::group(['prefix' => 'api'], function()
 	// version 1 (v1)
 	Route::group(['prefix' => 'v1'], function()
 	{
-		Route::resource('quation', 'Api\v1\QuatationController');
+		Route::resource('quotation', 'Api\v1\QuatationController');
 		Route::resource('box-rental', 'Api\v1\BoxRentalController');
 		Route::post('box-rental-email', 'Api\v1\BoxRentalController@email');
 

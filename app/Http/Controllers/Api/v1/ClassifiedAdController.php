@@ -13,6 +13,7 @@ use App\ClassicAd;
 use App\UserClassicAd;
 use App\UserClassicAdImage;
 use App\Location;
+use App\Item;
 
 class ClassifiedAdController extends Controller {
 
@@ -51,7 +52,7 @@ class ClassifiedAdController extends Controller {
 	 */
 	public function create()
 	{
-
+		//
 	}
 
 	/**

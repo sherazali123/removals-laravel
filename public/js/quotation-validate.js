@@ -1,6 +1,5 @@
 /* FORM WIZARD VALIDATION SIGN UP ======================================== */
 
-$('form#custom').attr('action', 'quotation-wizard-send.php');  /* new version 1.1 */
 
 $(function() {
 
@@ -66,10 +65,10 @@ $(function() {
 					},
 					submitHandler: function(form) 
 					{
-					if($('input#website').val().length == 0)
-					{ 
-					form.submit();
-					}
+						if($('input#website').val().length == 0)
+						{ 
+							form.submit();
+						}
 					}
 				});
 

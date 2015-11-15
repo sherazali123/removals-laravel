@@ -60,6 +60,25 @@ return [
         '19' => '19',
         '20' => '20',
     ],
+    'pessengers' => [
+        '1' => '1 Pessenger',
+        '2' => '2 Pessengers',
+        '3' => '3 Pessengers',
+        '4' => '4 Pessengers',
+        '5' => '5 Pessengers',
+    ],
+    'floors' => [
+        '1' => '1st Floor',
+        '2' => '2nd Floor',
+        '3' => '3rd Floor',
+        '4' => '4th Floor',
+        '5' => '5th Floor',
+        'other' => 'Other'
+    ],
+    'elevators' => [
+        'Yes' => 'With Elevator',
+        'No' => 'Without elevator',
+    ],
     'general' => [
         'delivery_fee' => 200,
         'refund' => 100,

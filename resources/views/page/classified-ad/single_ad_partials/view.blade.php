@@ -32,6 +32,9 @@
                                         @endforeach
                                    </div><!-- End row-->
                            @endif
+
+                           @include('application/social_share')
                         </div>
+
     </div><!-- End container -->
         

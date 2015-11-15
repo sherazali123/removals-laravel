@@ -71,10 +71,18 @@
 		        url: $("#box_rentel_form").attr('action') + '-email',
 		        data: responseData, 
 		        beforeSend: function(data){
+		        	$("#confirmOrderBtn").html('Confirming...');
+		        	$("#confirmOrderBtn").prop('disabled', true);
 		        },
 		        success: function(response) {
 		           if(response.status == 200){
 		           	
+		           	$(':input','#box_rentel_form')
+						  .not(':button, :submit, :reset, :hidden')
+						  .val('')
+						  .removeAttr('checked')
+						  .removeAttr('selected');
+
 		           	$("#order").modal('hide');
 	        		$("#confirmorder").modal('show');
 
@@ -83,10 +91,16 @@
 		           } else {
 		           	alert(response.message);
 		           }
+		           $("#confirmOrderBtn").html('Confirm Order');
+		        	$("#confirmOrderBtn").prop('disabled', false);
 		        },
 		        complete: function(data) {
+		        	$("#confirmOrderBtn").html('Confirm Order');
+		        	$("#confirmOrderBtn").prop('disabled', false);
 		        },
 		        error: function() {
+		        	$("#confirmOrderBtn").html('CConfirm Order');
+		        	$("#confirmOrderBtn").prop('disabled', false);
 		             //$("#commentList").append($("#name").val() + "<br/>" + $("#body").val());
 		            alert("There was an error submitting comment");
 		        }

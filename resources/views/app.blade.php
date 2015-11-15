@@ -48,12 +48,9 @@
 	<![endif]-->
 
 	<div id="preloader">
-        <div class="sk-spinner sk-spinner-wave">
-            <div class="sk-rect1"></div>
-            <div class="sk-rect2"></div>
-            <div class="sk-rect3"></div>
-            <div class="sk-rect4"></div>
-            <div class="sk-rect5"></div>
+       <div class="sk-double-bounce">
+          <div class="sk-child sk-double-bounce1"></div>
+          <div class="sk-child sk-double-bounce2"></div>
         </div>
     </div>	
     <!-- End Preload -->
@@ -89,7 +86,7 @@
                                 <a href="{{ url('/classified-ad') }}">Classified Ad </a>
                             </li>
                             <li class="submenu">
-                                <a href="{{ url('/blog') }}" >Blog </a>
+                                <a href="http://moveinkorea.blogspot.kr/" target="_blank">Blog </a>
                               
                             </li>
                             <li class="submenu">

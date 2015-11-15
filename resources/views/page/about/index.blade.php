@@ -21,7 +21,7 @@
             
             <div class="banner nomargin">
                 <h4>For more detailas <span>read our blog</span></h4>
-                <a href="#" class="btn_1 white">Read more</a>
+                <a href="http://moveinkorea.blogspot.kr/" target="_blank" class="btn_1 white">Read more</a>
             </div>
         </div>
 @endsection
