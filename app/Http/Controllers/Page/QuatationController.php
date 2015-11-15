@@ -21,7 +21,7 @@ class QuatationController extends BaseController {
     public function __construct() {
         parent::__construct();
         $this->view_data['view_path_root'] = 'page.quatation'; 
-        $this->view_data['page_title'] = $this->view_data['page_title'] .' - Quatation';
+        $this->view_data['page_title'] = $this->view_data['page_title'] .' - Quotation';
 
         $this->view_data['heading'] = 'Ask for a quotation';
         $this->view_data['sub_heading'] = 'Complete the following steps complete the quotation!';
