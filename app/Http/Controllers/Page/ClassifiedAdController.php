@@ -93,6 +93,8 @@ class ClassifiedAdController extends BaseController {
 			$this->view_data['offset'] = 0;
 		}
 
+
+
 		$this->view_data['page_no'] = $this->view_data['offset'] + 1;
 
 		$search_query = Input::get('search_query', false);
@@ -101,6 +103,8 @@ class ClassifiedAdController extends BaseController {
 		// var_dump($page_size, $page_no, $search_query);die;
 
 		$this->view_data['classic_ad'] = ClassicAd::findBySlug($slug);
+
+		$this->view_data['page_title'] .= ' - '.$this->view_data['classic_ad']->title;
 
 		$this->view_data['result_count'] = $this->view_data['classic_ad']->userClassicAds()->searchLocation($location)->searchText($search_query)->orderBy('created_at', 'desc')->count();
 
@@ -129,6 +133,9 @@ class ClassifiedAdController extends BaseController {
 		$this->view_data['user_classic_ad'] = UserClassicAd::findBySlug($user_classic_ad_slug);
 
 		$this->view_data['heading'] = $this->view_data['user_classic_ad']->title;
+
+		$this->view_data['page_title'] .= ' - '.$this->view_data['classic_ad']->title.' - '.$this->view_data['user_classic_ad']->title;
+
 		$this->view_data['sub_heading'] = 'Added By <strong>'.$this->view_data['user_classic_ad']->advertiser_name.'</strong>';
 
 
