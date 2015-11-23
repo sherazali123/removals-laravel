@@ -34,7 +34,7 @@ class BoxRentalController extends BaseController {
 		$this->view_data['rental_services'] = RentalService::active()->get();
 		$this->view_data['purchase_services'] = PurchaseService::active()->get();
 
-		$this->view_data['quantities'] = Config::get('constants.quantity');
+		$this->view_data['quantities'] = Config::get('constants.quantity_10');
 
 		$this->view_data['cost'] = [];
 		$this->view_data['cost']['rental_deposit_total'] = 0;

@@ -94,7 +94,6 @@ class ClassifiedAdController extends BaseController {
 		}
 
 
-
 		$this->view_data['page_no'] = $this->view_data['offset'] + 1;
 
 		$search_query = Input::get('search_query', false);

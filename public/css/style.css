@@ -398,8 +398,9 @@ ul#contact_details_footer li#address_footer, ul#contact_details_footer li#phone_
 #get_quote h3{
 	color:#fff;
 	margin:5px 0 0 0;
-	font-family: 'Gochi Hand', cursive;
 	font-size:28px;
+	    /* font-family: 'Gochi Hand', cursive; */
+    font-size: 26px;
 }
 .box_style_1.home {
 	padding:20px;
@@ -437,9 +438,9 @@ ul#contact_details_footer li#address_footer, ul#contact_details_footer li#phone_
 	font-weight:500;
 }
 #how_to h3{
-	font-family: 'Gochi Hand', cursive;
+	/*font-family: 'Gochi Hand', cursive;*/
 	color: #fff;
-	font-size:36px;
+	font-size:30px;
 	font-weight:normal;
 	margin-bottom:0;
 }
@@ -1420,4 +1421,8 @@ label.cost {
 }
 .ad_heading {
     color: #06728D;
+}
+a.list-group-item:focus, a.list-group-item:hover {
+    color: #FAFAFA;
+    background-color: #06728D;
 }

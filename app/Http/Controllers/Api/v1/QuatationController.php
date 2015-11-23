@@ -68,24 +68,25 @@ class QuatationController extends Controller {
 		$data = $input;
 		
 		$rules = [
-								        'firstname_quote' => 'required|max:150',
-								        'lastname_quote' => 'required|max:150',
+										'service_type' => 'required|max:150',
+								        'name_quote' => 'required|max:150',
 								        'email_quote' => 'required|email',
-								        'phone_quote' => 'required|numeric',
+								        'phone_quote' => 'required',
 								        'date_quote' => 'required|max:20',
-								        'passengers' => 'required|numeric',
+								        'passengers' => 'numeric',
 								        'pickup_addr' => 'required|max:255',
-								        'pickup_building' => 'required|max:255',
-								        'pickup_floors' => 'required|numeric',
-								        'pickup_room_no' => 'required|numeric',
-								        'pickup_elevator' => 'required|max:3',
+								        'pickup_building' => 'max:255',
+								        'pickup_floors' => 'max:255',
+								        'pickup_room_no' => 'max:255',
+								        'pickup_elevator' => 'max:3',
 								        'delivery_addr' => 'required|max:255',
-								        'delivery_building' => 'required|max:255',
-								        'delivery_floors' => 'required|numeric',
-								        'delivery_room_no' => 'required|numeric',
-								        'delivery_elevator' => 'required|max:3',
-								        'message_quote' => 'required|max:1000'
+								        'delivery_building' => 'max:255',
+								        'delivery_floors' => 'max:255',
+								        'delivery_room_no' => 'max:255',
+								        'delivery_elevator' => 'max:3',
+								        'message_quote' => 'max:1000'
 								    ];
+
 		$this->validate($request, $rules);
 
 		$items = Item::active()->orderBy('number_in_row')->get();
@@ -104,7 +105,7 @@ class QuatationController extends Controller {
 		$res['status'] = 200;
 
 		Mail::send('emails.quotation', $res, function ($m) use ($data) {
-            $m->to(Config::get('constants.admin')['email'], Config::get('constants.admin')['name'])->subject($data['firstname_quote'].' has filled a quotation for you.');
+            $m->to(Config::get('constants.admin')['email'], Config::get('constants.admin')['name'])->subject($data['name_quote'].' has filled a quotation for you.');
         });
 		return redirect('/box-rental');
 	}

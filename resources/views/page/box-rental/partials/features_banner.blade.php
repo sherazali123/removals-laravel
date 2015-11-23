@@ -13,7 +13,7 @@
                         <p>
                             <img src="{{ asset('/img/howto/plastic_bag.png') }}" alt=""  data-retina="true">
                       </p>
-                        <h5>Plastic boxes</h5>
+                        <h5>All tools in one box</h5>
                     </div>
                     <div class="col-md-2 text-center">
                         <p>
@@ -37,7 +37,7 @@
                 </div><!-- End row -->
                 <h3 class="text-center">Moving never can't be more easy!</h3>
                 <p class="lead text-center">
-                    Call Us 004594234244
+                    Call Us 010-2214-7112
                 </p>
             </div>
         </div><!-- End how_to -->

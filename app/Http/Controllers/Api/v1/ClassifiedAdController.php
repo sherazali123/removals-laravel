@@ -70,7 +70,7 @@ class ClassifiedAdController extends Controller {
 								        'title' => 'required|max:255',
 								        'location' => 'required',
 								        'email' => 'required|email',
-								        'phone_no' => 'required|numeric',
+								        'phone_no' => 'required',
 								        'month' => 'required|numeric',
 								        'year' => 'required|numeric',
 								        'comment' => 'required|max:1500',

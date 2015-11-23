@@ -60,7 +60,7 @@
                                         {!! Form::label('Telephone') !!}
                                         {!! Form::text('phone_no', null, 
                                                                     array(null, 
-                                                                          'class'=>'form-control number required')) !!}
+                                                                          'class'=>'form-control phone_no required')) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">

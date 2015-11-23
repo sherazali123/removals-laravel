@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
+use Config;
+
 class Item extends Model {
 
 	/**
@@ -26,6 +28,14 @@ class Item extends Model {
 	protected $hidden = [];
 
 	
+	public function getQuantity(){
+		if(in_array($this->title, ['Small Box', 'Big Box', 'Small Luggage (less than 20 inch)', 'Big Luggage (more than 20 inch)'])){
+			return Config::get('constants.quantity_40');
+		} else {
+			return Config::get('constants.quantity_10');
+		}
+	}
+
 	/**
 	 * Scope: active ads
 	 *

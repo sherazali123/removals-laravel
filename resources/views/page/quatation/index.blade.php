@@ -34,19 +34,19 @@
 
 	 function collapse(id){
 	    if(id=='one'){
-
+	    	$("#service_type").val("Economic Service");
 	        $('#collapseAlertOne').collapse('toggle');
 	        $('#collapseAlertTwo').collapse('hide');
 	        $('#collapseAlertThree').collapse('hide');
 
 	    }else if(id=='two'){
-
+	    	$("#service_type").val("Standard Service");
 	    	$('#collapseAlertTwo').collapse('toggle');
 	        $('#collapseAlertOne').collapse('hide');
 	        $('#collapseAlertThree').collapse('hide');
 
 	    } else if(id=='three'){
-
+	    	$("#service_type").val("Premium Service");
 	        $('#collapseAlertThree').collapse('toggle');
 	        $('#collapseAlertTwo').collapse('hide');
 	        $('#collapseAlertOne').collapse('hide');

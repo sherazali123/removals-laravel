@@ -17,17 +17,14 @@
 	@endforeach
 </table>
 
+<h4>Service Type: <b>{{ $data['service_type'] }}</b></h4>
 
 <h4>Personal Information</h4>
 
 <table>
 	<tr>
-		<td style="width:300px;">First name:</td>
-		<td style="width:700px;">{{ $data['firstname_quote'] }}</td>
-	</tr>
-	<tr>
-		<td style="width:300px;">Last name:</td>
-		<td style="width:700px;">{{ $data['lastname_quote'] }}</td>
+		<td style="width:300px;">Name:</td>
+		<td style="width:700px;">{{ $data['name_quote'] }}</td>
 	</tr>
 	<tr>
 		<td style="width:300px;">Email:</td>

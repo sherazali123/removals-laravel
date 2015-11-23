@@ -44,6 +44,7 @@
                                      'class' => 'add_new_add', 
                                      'novalidate' => 'novalidate',
                                      'id' => 'box_rentel_form')) !!}
+
                     <div class="form_title">
                         <h3><strong><i class="icon-suitcase"></i></strong>Rental Services</h3>
                         <p>
@@ -179,7 +180,7 @@
                             <div class="row">
                                 <div class="col-md-4 col-sm-4">
                                     <div class="form-group">
-                                        {!! Form::label('Building Name') !!}
+                                        {!! Form::label('Building Name / Number') !!}
                                         {!! Form::text('building_name', null, 
                                                                     array(null, 
                                                                           'class'=>'form-control required')) !!}
@@ -190,7 +191,7 @@
                                         {!! Form::label('Room No.') !!}
                                         {!! Form::text('room_no', null, 
                                                                     array(null, 
-                                                                          'class'=>'form-control number required')) !!}
+                                                                          'class'=>'form-control required')) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
@@ -198,7 +199,7 @@
                                         {!! Form::label('Phone No.') !!}
                                         {!! Form::text('phone_no', null, 
                                                                     array(null, 
-                                                                          'class'=>'form-control number required')) !!}
+                                                                          'class'=>'form-control required phone_no')) !!}
                                     </div>
                                 </div>
                             </div>

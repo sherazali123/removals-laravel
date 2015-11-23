@@ -77,7 +77,7 @@
                         <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
                         <ul>
                             <li class="submenu">
-                                <a href="{{ url('/') }}">Quotation </a>
+                                <a href="{{ url('/quotation') }}">Quotation </a>
                             </li>
                             <li class="submenu">
                                 <a href="{{ url('/box-rental') }}" >Box Rental </a>

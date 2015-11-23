@@ -42,6 +42,7 @@
                                         <li class="list-group-item">Unpacking</li>
                                  </div>
                                  </div>
+                                 <input name="service_type" id="service_type" class="required" value="" type="hidden">
                         </div>
                        </div><!-- End row-->
 
@@ -68,22 +69,12 @@
                           <div class="row">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <label>First name</label>
-                                        {!! Form::text('firstname_quote', null, 
+                                        <label>Name</label>
+                                        {!! Form::text('name_quote', null, 
                                                                         array(null, 
                                                                               'class'=>'form-control required')) !!}
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Last name</label>
-                                        {!! Form::text('lastname_quote', null, 
-                                                                        array(null, 
-                                                                              'class'=>'form-control required')) !!}
-                                    </div>
-                                </div>
-                            </div><!-- End row -->
-                            <div class="row">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
                                         <label>Email</label>
@@ -92,30 +83,34 @@
                                                                               'class'=>'form-control email required')) !!}
                                     </div>
                                 </div>
+                            </div><!-- End row -->
+                            <div class="row">
+                                
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
                                         <label>Telephone</label>
                                         {!! Form::text('phone_quote', null, 
                                                                         array(null, 
-                                                                              'class'=>'form-control number required')) !!}
+                                                                              'class'=>'form-control phone_no required')) !!}
                                     </div>
                                 </div>
-                            </div><!-- End row -->
-                            <div class="row">
                                 <div class="col-md-6 col-sm-6">
-                                	<div class="form-group">
+                                  <div class="form-group">
                                         <label>Moving Date</label>
                                         {!! Form::text('date_quote', null, 
                                                                         array(null, 
                                                                               'class'=>'form-control required', 'id' => 'date_quote')) !!}
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-6">
+                            </div><!-- End row -->
+                            <div class="row">
+                                
+                                <div class="col-md-12 col-sm-12">
                                 		<label>Passengers</label>
 	                                    <div class="form-group">
                                             {!! Form::select('passengers', 
                                                           array('' => 'Select Passengers') + $pessengers, null, 
-                                                          ['class' => 'form-control required']) !!}
+                                                          ['class' => 'form-control']) !!}
 	                                    </div>
 	                            <div class="alert alert-info" role="alert">If the delivery destination is greater than 20Km, MIK recommends that only 1 passenger rides with the driver.</div>
                                 </div>
@@ -137,10 +132,10 @@
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <label>Building Name</label>
+                                        <label>Building Name / Number</label>
                                         {!! Form::text('pickup_building', null, 
                                                                         array(null, 
-                                                                              'class'=>'form-control required')) !!}
+                                                                              'class'=>'form-control')) !!}
                                     </div>
                                 </div>
                             </div>
@@ -148,9 +143,9 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Floor</label>
-                                        {!! Form::select('pickup_floors', 
-                                                          array('' => 'Select Floor') + $floors, null, 
-                                                          ['class' => 'form-control required']) !!}
+                                        {!! Form::text('pickup_floors', null, 
+                                                                        array(null, 
+                                                                              'class'=>'form-control')) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -158,7 +153,7 @@
                                         <label>Room Number</label>
                                         {!! Form::text('pickup_room_no', null, 
                                                                         array(null, 
-                                                                              'class'=>'form-control number required')) !!}
+                                                                              'class'=>'form-control')) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -166,7 +161,7 @@
                                         <label>Elevator</label>
                                         {!! Form::select('pickup_elevator', 
                                                           array('' => 'Select Elevator') + $elevators, null, 
-                                                          ['class' => 'form-control required']) !!}
+                                                          ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                             </div><!--End row -->
@@ -183,10 +178,10 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <label>Building Name</label>
+                                    <label>Building Name / Number</label>
                                     {!! Form::text('delivery_building', null, 
                                                                         array(null, 
-                                                                              'class'=>'form-control required')) !!}
+                                                                              'class'=>'form-control')) !!}
                                 </div>
                             </div>
                         </div>
@@ -194,9 +189,9 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Floor</label>
-                                    {!! Form::select('delivery_floors', 
-                                                          array('' => 'Select Floor') + $floors, null, 
-                                                          ['class' => 'form-control required']) !!}
+                                    {!! Form::text('delivery_floors', null, 
+                                                                        array(null, 
+                                                                              'class'=>'form-control')) !!}                      
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -204,7 +199,7 @@
                                         <label>Room Number</label>
                                         {!! Form::text('delivery_room_no', null, 
                                                                         array(null, 
-                                                                              'class'=>'form-control number required')) !!}
+                                                                              'class'=>'form-control')) !!}
                                     </div>
                             </div>
                             <div class="col-md-6">
@@ -212,7 +207,7 @@
                                     <label>Elevator</label>
                                     {!! Form::select('delivery_elevator', 
                                                           array('' => 'Select Elevator') + $elevators, null, 
-                                                          ['class' => 'form-control required']) !!}
+                                                          ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                         </div><!--End row -->
@@ -223,7 +218,7 @@
                         </div>
                         </fieldset><!-- End Step Three -->
                         
-                        <fieldset title="Step 5" >
+                        <fieldset title="Step 4" >
                           <legend>Items & Notes</legend>
                           <h5 style="margin-top:0">Select items</h5>
                           <p class="add_bottom_45">From below list of items, please select an item and number of items that you want to move</p>
@@ -238,7 +233,7 @@
                                                     <h6 style="min-height:40px;">{{ $item->title }}</h6>
                                                     <div class="form-group">
                                                     {!! Form::select($item->id.'___quantity',
-                                                          $quantities, null, 
+                                                          $item->getQuantity(), null, 
                                                           ['class' => 'form-control thumbnail_select']) !!}
                                                     </div>
                                                   </div>
@@ -254,7 +249,7 @@
                             {!! Form::label('Write your notes or message') !!}
                              {!! Form::textarea('message_quote', null, 
                                                                             array(null, 
-                                                                                  'class'=>'form-control required',
+                                                                                  'class'=>'form-control',
                                                                                   'style' => 'height: 100px;')) !!}
 						                 </div>
                           <p>

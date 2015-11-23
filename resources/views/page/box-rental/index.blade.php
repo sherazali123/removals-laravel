@@ -138,6 +138,9 @@
 
 	    });
 	    function updateCosts(){
+
+
+
 	    	$( ".rental_services" ).each(function( index ) {
 			  var quantities_rental = $(this).find('.serviceChanged').val();
 			  var unit_price_rental = $(this).find('input[name=price]').val();
@@ -160,6 +163,10 @@
 		    $("#br_delivery_fee").html(cost.delivery_fee);
 		    $("#br_total_amount_due").html(cost.total_amount_due);
 		    $("#br_refund").html(cost.refund);
+
+		    cost.total_amount_due = 0;
+	    	cost.purchase_deposit_total = 0;
+	    	cost.rental_deposit_total = 0;
 	    }
 	</script>
 @endsection

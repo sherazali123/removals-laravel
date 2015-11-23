@@ -9,7 +9,7 @@
     
             <div id="intro">
                 <img src="{{ asset('img/about_1.jpg') }}" alt="" class="img-responsive">
-                <h2>We are "Move in Korea"</h2>
+                <h2 style="margin: 30px 0;">We are "Move in Korea"</h2>
                 <p>
                     {{ $text }}
                 </p>
@@ -18,10 +18,7 @@
             <hr>
            
             
-            <div class="banner nomargin">
-                <h4>For more detailas <span>read our blog</span></h4>
-                <a href="http://moveinkorea.blogspot.kr/" target="_blank" class="btn_1 white">Read more</a>
-            </div>
+          
         </div>
 @endsection
 @section('footerjs')
