@@ -1,8 +1,8 @@
 
             <div class="row">
-               
+
                 <div class="col-md-12">
-                    
+                    <div class="table-responsive">
                     <table class="table table-bordered">
                             <thead>
                               <tr>
@@ -18,7 +18,7 @@
                                 <th></th>
                               </tr>
                             </thead>
-                            
+
                             <tbody>
                               <?php $index = count($user_classic_ads); ?>
                               @if($index  > 0)
@@ -37,16 +37,14 @@
                                   <td><a href="{{ URL::to('classified-ad/view').'/'.$classic_ad->slug.'/'.$ad->slug }}"><i class="icon-search-circled"></i><span class="i-name">View</span></a></td>
                                 </tr>
                                 @endforeach
-                                
+
                               @else
                                <tr>
                                   <td colspan=8>No ad is added yet.</td>
                               @endif
                             </tbody>
                     </table>
-                    @include('application.paginator', ['offset' => $offset, 'page_no' => $page_no, 'page_size' => $page_size, 'count' => $result_count, 'result_list' => $user_classic_ads])    
+                    </div>
+                    @include('application.paginator', ['offset' => $offset, 'page_no' => $page_no, 'page_size' => $page_size, 'count' => $result_count, 'result_list' => $user_classic_ads])
                 </div>
             </div><!-- End row -->
-            
-           
-        
