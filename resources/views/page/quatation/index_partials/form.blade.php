@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <div class="container margin_60">
         	<div class="row">
                 <div class="col-md-12">
