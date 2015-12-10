@@ -28,6 +28,10 @@ Route::get('blog', 'Blog\IndexController@index');
 
 Route::get('about', 'Page\AboutController@index');
 
+Route::get('/footer', function () {
+    return view('application.footer');
+});
+
 // api
 Route::group(['prefix' => 'api'], function()
 {
@@ -39,7 +43,7 @@ Route::group(['prefix' => 'api'], function()
 		Route::post('box-rental-email', 'Api\v1\BoxRentalController@email');
 
 		Route::resource('classified-ad', 'Api\v1\ClassifiedAdController');
-	});	
+	});
 });
 
 Route::controllers([

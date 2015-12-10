@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     @if(isset($meta_data))
     	<meta name="keywords" content="{{ $meta_data['keywords'] }}" />
 	    <meta name="description" content="{{ $meta_data['description'] }}">
@@ -22,14 +22,14 @@
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ asset('/img/apple-touch-icon-72x72-precomposed.png') }}">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ asset('/img/apple-touch-icon-114x114-precomposed.png') }}">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ asset('/img/apple-touch-icon-144x144-precomposed.png') }}">
-    
+
     <!-- Google web fonts -->
    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
 
     <!-- BASE CSS -->
     <link href="{{ asset('/css/base.css') }}" rel="stylesheet">
-	
+
 	@yield('headercss')
 
     <!--[if lt IE 9]>
@@ -42,7 +42,7 @@
 
 </head>
 <body>
-	
+
 	<!--[if lte IE 8]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
 	<![endif]-->
@@ -52,7 +52,7 @@
           <div class="sk-child sk-double-bounce1"></div>
           <div class="sk-child sk-double-bounce2"></div>
         </div>
-    </div>	
+    </div>
     <!-- End Preload -->
 
     <div class="layer"></div>
@@ -60,7 +60,7 @@
 
     <!-- Header================================================== -->
     <header>
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-3">
@@ -87,12 +87,12 @@
                             </li>
                             <li class="submenu">
                                 <a href="http://moveinkorea.blogspot.kr/" target="_blank">Blog </a>
-                              
+
                             </li>
                             <li class="submenu">
                                 <a href="{{ url('/about') }}">About Us </a>
                             </li>
-                                
+
                         </ul>
                     </div><!-- End main-menu -->
                 </nav>
@@ -103,19 +103,12 @@
 	@yield('content')
 
 
-	<footer class="home_footer"><!-- Footer Start -->
+	<footer class="home_footer">
         <div class="container">
-             <div id="social_footer" class="social_footer">
-                        <ul>
-                            <li><a href="#"><i class="icon-facebook"></i></a></li>
-                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                            <li><a href="#"><i class="icon-google"></i></a></li>
-                            <li><a href="#"><i class="icon-vimeo"></i></a></li>
-                        </ul>
-                </div>
+             <iframe name="myframe" style="border: 0;" src="{{ url('/footer') }}" height="120" width="50%">Your browser does not support frames.</iframe>
              </div><!-- End container -->
-    </footer><!-- End footer -->
-            
+    </footer>
+
     <div id="copy">
     	<div class="container">
         	© Move in Korea 2015 - All rights reserved.

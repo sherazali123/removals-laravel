@@ -25,7 +25,7 @@
                         <p>
                             <img src="{{ asset('/img/howto/thumbsup.png') }}" alt="" data-retina="true">
                       </p>
-                        <h5>Easy preperation</h5>
+                        <h5>Easy preparation</h5>
                     </div>
                     <div class="col-md-2 text-center">
                         <p>
@@ -38,6 +38,9 @@
                 <h3 class="text-center">Moving never can't be more easy!</h3>
                 <p class="lead text-center">
                     Call Us 010-2214-7112
+                </p>
+                <p  class="lead text-center">
+                    <span>Bank: Kookmin Bank  <b>|</b></span><span>  Account Number: 724702-01-127514  <b>|</b></span><span>  Recipient: 박범호</span>
                 </p>
             </div>
         </div><!-- End how_to -->

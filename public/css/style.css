@@ -1,10 +1,10 @@
 /*
-Theme Name: REMOVALS 
+Theme Name: REMOVALS
 Theme URI: http://www.ansonika.com/removals/
 Author: Ansonika
 Author URI: http://themeforest.net/user/Ansonika/
 
-[Table of contents] 
+[Table of contents]
 
 1. SITE STRUCTURE and TYPOGRAPHY
 - 1.1 Typography
@@ -59,8 +59,8 @@ a.link_normal:after{
 }
 p {margin: 0 0 25px 0;}
 .main_title {
-	background-color:rgba(0, 0, 0, 0.3); 
-	display:inline-block; 
+	background-color:rgba(0, 0, 0, 0.3);
+	display:inline-block;
 	padding:15px 15px 0 15px;
 }
 hr {
@@ -89,7 +89,7 @@ a.button_intro, .button_intro  {
 	text-transform:uppercase;
 	font-weight:bold;
 	-webkit-transition: none;
-	transition:none; 
+	transition:none;
 }
 a.button_intro:hover, .button_intro:hover {
 	background: #333;
@@ -205,16 +205,16 @@ header{
 }
 header.sticky #top_line{
 	height: 0;
-	overflow:hidden; 
-	padding:0; 
-	opacity:0; 
+	overflow:hidden;
+	padding:0;
+	opacity:0;
 	visibility:visible;
 }
-header.sticky{ 
+header.sticky{
 	-webkit-box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.41);
 	-moz-box-shadow:0px 2px 10px -2px rgba(0, 0, 0, 0.41);
 	box-shadow:0px 2px 10px -2px rgba(0, 0, 0, 0.41);
-	background-color:#fff; 
+	background-color:#fff;
 	padding-bottom:0;
 	position:fixed;
 	top:0;
@@ -442,7 +442,7 @@ ul#contact_details_footer li#address_footer, ul#contact_details_footer li#phone_
 	color: #fff;
 	font-size:30px;
 	font-weight:normal;
-	margin-bottom:0;
+	margin-bottom:10px;
 }
 #how_to h4{
 	color:#fff;
@@ -521,16 +521,16 @@ color:#fff;
 /*-------- 2.2 About us --------*/
 #intro{
 	text-align:center;
-} 
+}
 #intro h2{
 	text-transform:uppercase;
 	font-weight:700;
 	margin-top:0;
-} 
+}
 #intro p{
 	font-size:20px;
 	line-height:24px;
-} 
+}
 ul.feat#about{
 	list-style:none;
 	margin: 20px 0 20px 0;
@@ -599,7 +599,7 @@ ul.feat#about li img{
   border:3px solid #fff;
 }
 .item blockquote {
-    border-left: none; 
+    border-left: none;
     margin: 0;
 	text-align:center;
 	font-family: 'Gochi Hand', cursive;
@@ -754,7 +754,7 @@ ul.feat li img{
 	position:relative;
 	top:5px;
 }
-/* Error validate style */   
+/* Error validate style */
 label.error{
 	font-size:11px;
 	position: absolute;
@@ -767,7 +767,7 @@ label.error{
 	color:#fff;
 	font-weight:normal;
 	padding:0 6px;
-   } 
+   }
   label.error:after {
 	content: '';
 	position: absolute;
@@ -779,7 +779,7 @@ label.error{
 	z-index: 1;
 	bottom: -6px;
 	left: 20%;
-} 
+}
 
 /*-------- 2.5 Quotation --------*/
 .button-back {float: left; }
@@ -821,19 +821,19 @@ ul.stepy-titles { margin:0; padding:0;}
 .form-control.error{ background:#fdf5f5}
 .stepy-error{ display:block;}
 .stepy-error label.error {
-	background: #e34f4f url(../img/alert.png) no-repeat 5px center; 
-	color: #fff; 
-	display: block; 
-	display:inline-block; 
-	font-size: 12px ; 
-	padding: 6px 10px 0px  25px;  
-	margin:8px 5px 2px 0; 
-	-khtml-border-radius: 3px; 
-	-moz-border-radius: 3px; 
-	-opera-border-radius: 3px; 
-	-webkit-border-radius: 3px; 
-	border-radius: 3px;  
-	position:static; 
+	background: #e34f4f url(../img/alert.png) no-repeat 5px center;
+	color: #fff;
+	display: block;
+	display:inline-block;
+	font-size: 12px ;
+	padding: 6px 10px 0px  25px;
+	margin:8px 5px 2px 0;
+	-khtml-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-opera-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	position:static;
 	line-height:normal;
 }
 .stepy-error label.error:after {border-width:0;}
@@ -868,18 +868,18 @@ input#website {display:none;}
 	padding:15px;
 	margin-bottom:20px;
 	border-top: 3px solid #629976;
-} 
+}
 .box_style_4 ul{
 	padding:0 0 0 25px;
 	margin:0 0 0 0;
-} 
+}
 .box_style_4 ul li{
 	margin: 0 0 10px 0;
-} 
+}
 
 /*-------- 2.7 Contacts --------*/
 #map {width:100%; height:350px; border:3px solid #ededed;}
-.box_style_4 h3{margin-top:0;} 
+.box_style_4 h3{margin-top:0;}
 .error_message {font-weight:bold; color:#e34f4f; margin-bottom:5px}
 
 /*============================================================================================*/
@@ -935,7 +935,7 @@ input#website {display:none;}
 .quote_banner a:hover{
 	background-color:#333;
 }
-/* Input form style */   
+/* Input form style */
 .form-control {
   font-size: 12px;
   color: #333;
@@ -944,9 +944,9 @@ input#website {display:none;}
 #booking .form-group{
 	position:relative;
 }
-/* Scroll top button */      
+/* Scroll top button */
 #toTop {
-	width:40px; 
+	width:40px;
 	height:40px;
 	background-color:rgba(0, 0, 0, 0.6);
 	text-align:center;
@@ -1055,7 +1055,7 @@ ul.list_2 li:before {
    display: table;
    width:100%;
    height:470px;
-   background: url(../img/bg_parallax.jpg) no-repeat center center; 
+   background: url(../img/bg_parallax.jpg) no-repeat center center;
    background-size:cover;
 }
 .bg_content > div{
@@ -1164,17 +1164,17 @@ ul.list_2 li:before {
 .banner:after, .banner:before{
 	position:absolute;
 	content:"";
-	z-index:1;	
+	z-index:1;
 	height:18px;
 	width:50%;
 	top:100%;
 }
 .banner:after{
-	left:0;	
+	left:0;
 	background: url(../img/shadow-bg.png) no-repeat top left;
 }
 .banner:before{
-	right:0;	
+	right:0;
 	background: url(../img/shadow-bg.png) no-repeat top right;
 }
 .banner a{
@@ -1229,13 +1229,13 @@ ul.list_2 li:before {
 	width:100%;
 	height:100%;
 	bottom:0;
-	background-color:#fff; 
-	z-index:999999; 
+	background-color:#fff;
+	z-index:999999;
 }
 .sk-spinner-wave.sk-spinner {
-  margin:-15px 0 0 -25px; 
+  margin:-15px 0 0 -25px;
   position:absolute;
-  left:50%; 
+  left:50%;
   top:50%;
   width: 50px;
   height: 30px;
@@ -1266,7 +1266,7 @@ ul.list_2 li:before {
   20% { -webkit-transform: scaleY(1);transform: scaleY(1);}
 }
 
-/** Collapse **/   
+/** Collapse **/
 .panel {
   border-radius: 0;
   -webkit-box-shadow: none;
@@ -1287,18 +1287,18 @@ ul.list_2 li:before {
 
 .loader { margin-left:5px; position:absolute;}
 
-/** Blockquote **/   
+/** Blockquote **/
 blockquote.styled{
 	font-family: 'Gochi Hand', cursive;
 	 line-height: 1.42857143;
 }
 
-/** tabs **/   
+/** tabs **/
 .tab-content{
-	padding:30px; 
-	background-color:#fff; 
-	border:1px solid #ddd; 
-	border-top:none; 
+	padding:30px;
+	background-color:#fff;
+	border:1px solid #ddd;
+	border-top:none;
 	margin-bottom:25px;
 	-webkit-border-bottom-right-radius: 3px;
 	-webkit-border-bottom-left-radius: 3px;
@@ -1311,7 +1311,7 @@ blockquote.styled{
 	background: rgba(90, 83, 83, 0) url(../img/pattern_green.png) repeat !important
 }
 .how_to p {
-	color: rgba(70, 63, 63, 0.27) !important;
+	color: rgba(43, 37, 37, 0.96) !important
 }
 .how_to h3 {
     color: #4E4E50 !important;
@@ -1425,4 +1425,22 @@ label.cost {
 a.list-group-item:focus, a.list-group-item:hover {
     color: #FAFAFA;
     background-color: #06728D;
+}
+
+.btn_quote.selectService, .btn_quote.boxRental{
+	width: 262px;
+	height: 69px;
+	font-size: 20px;
+}
+.btn_quote.selectService{
+	padding: 23px 42px;
+}
+.btn_quote.boxRental{
+	padding: 23px 70px;
+}
+footer {
+    padding: 0px 0 10px 0;
+}
+footer .container {
+	    text-align: center;
 }

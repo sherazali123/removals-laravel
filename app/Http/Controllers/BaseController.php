@@ -20,12 +20,12 @@ class BaseController extends Controller {
      * @return void
      */
     public function __construct() {
-        
+
         $this->view_data['page_title'] = 'Move in Korea';
 
         self::MetaData();
     }
-	
+
     /**
      * Create default meta data for page
      *

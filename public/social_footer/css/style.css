@@ -1,0 +1,110 @@
+/**
+ * Note: The icon images used here are
+ * hotlink protected and will not work
+ * outside of Codepen.
+ *
+ * You can get the icons to host yourself
+ * here: http://simpleicons.org/
+ */
+body {
+  display: block;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.social-icons {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.icon {
+  float: left;
+  position: relative;
+  width: 19%;
+  height: 0;
+  margin: 1% 0.5%;
+  padding-bottom: 19%;
+}
+@media all and (min-width: 640px) {
+  .icon {
+    width: 9%;
+    padding-bottom: 9%;
+  }
+}
+.icon:last-of-type {
+  margin-right: 0;
+}
+.icon a {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+.icon a:hover {
+  background-color: #222;
+  background-size: 0%;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.icon__name {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -7px;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  opacity: 0;
+  -webkit-filter: blur(25px);
+          filter: blur(25px);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+.icon:hover .icon__name {
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  opacity: 1;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+.icon--spotify a {
+  background-color: #80b719;
+  background-size: 49px;
+  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/call.png");
+}
+.icon--facebook a {
+  background-color: #3b5998;
+  background-size: 49px;
+  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/facebook.png");
+}
+
+.icon--twitter a {
+  background-color: #00aced;
+  background-size: 49px;
+  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/twitter.png");
+}
+
+.icon--gplus a {
+  background-color: #007fb1;
+  background-size: 49px;
+  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/googleplus.png");
+}
+
+.icon--youtube a {
+  background-color: #5c3d2e;
+  background-size: 49px;
+  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/youtube.png");
+}
