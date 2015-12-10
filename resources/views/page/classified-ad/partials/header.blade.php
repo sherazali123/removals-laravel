@@ -8,7 +8,6 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4" id="position">
-                
                     </div>
                 </div>
             </div>

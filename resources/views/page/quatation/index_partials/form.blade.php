@@ -49,18 +49,18 @@
 
                        <div id="collapseAlertOne" role="tabpanel" class="collapse">
                                   <div class="alert alert-info" role="alert" id="myAlert1">
-                                          <strong>Only Transpotation (Cheapest Option!) </strong> We drive, customers load and unload. Before the drivers arrival please ensure that all items are brought down to the ground floor.
+                                          <strong>Economic Service</strong> <br> Only Transpotation (Cheapest Option) We drive, customers load and unload. Before the drivers arrival please ensure that all items are brought down to the ground floor.
                                   </div>
                        </div>
                        <div id="collapseAlertTwo" role="tabpanel" class="collapse">
                                   <div class="alert alert-info" role="alert" id="myAlert2">
-                                          <strong>Need Help?</strong> The driver will help you to load and unload. This service is good for customers who need help to load and unload their items. You and the driver will load
-										  and unload together.
+                                          <strong>Standard Service</strong> <br> The driver will help you to load and unload. This service is good for customers who need help to load and unload their items. You and the driver will load
+										  and unload together. Please ensure that all items are packed before the driver arrival. If you cannot help with loading and unloading, please leave a comment in the notes section which is located in Step 4.
                                   </div>
                        </div>
                        <div id="collapseAlertThree" role="tabpanel" class="collapse">
                                   <div class="alert alert-info" role="alert" id="myAlert3">
-                                          <strong>Need Full service?</strong>  We pack, load, unload and unpack. This service is good for customers who do not have time to prepare for moving.
+                                          <strong>Premium Service</strong> <br> We pack, load, unload and unpack. This service is good for customers who do not have time to prepare for moving.
                                   </div>
                        </div>
 
