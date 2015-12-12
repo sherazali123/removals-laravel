@@ -102,12 +102,20 @@
 
 	@yield('content')
 
-
-	<footer class="home_footer">
+	<footer><!-- Footer Start -->
         <div class="container">
-             <iframe name="myframe" style="border: 0;" src="{{ url('/footer') }}" height="120" width="50%">Your browser does not support frames.</iframe>
+             <div id="social_footer" >
+                        <ul>
+														<li><a class="_phone" href="tel://01093516307"><i class="icon-phone"></i></a></li>
+                            <li><a class="_facebook" target="_blank" href="https://www.facebook.com/moveinkorea/"><i class="icon-facebook"></i></a></li>
+                            <li><a class="_twitter"  target="_blank" href="https://twitter.com/movingpeople_"><i class="icon-twitter"></i></a></li>
+                            <li><a class="_google"  target="_blank" href="http://moveinkorea.blogspot.kr/"><i class="icon-google"></i></a></li>
+                            <li><a  class="_youtube" target="_blank" href="https://www.youtube.com/c/DexterPark"><i class="icon-youtube"></i></a></li>
+                        </ul>
+                </div>
              </div><!-- End container -->
-    </footer>
+    </footer><!-- End footer -->
+
 
     <div id="copy">
     	<div class="container">
