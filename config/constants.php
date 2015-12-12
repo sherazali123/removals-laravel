@@ -137,10 +137,10 @@ return [
     ],
     'costs' => [
       'rental_deposit_total' => 30000,
-      'delivery_fee' => 10000,
-      'total_amount_due' => 40000,
-      'refund' => 10000,
-      'total_cost' => 600000
+      'delivery_fee' => 30000,
+      'total_amount_due' => 60000,
+      'refund' => 30000,
+      'total_cost' => 60000
     ],
     'admin' => [
         'email' => env('ADMIN_EMAIL', 'sheraz.ali342@gmail.com'),

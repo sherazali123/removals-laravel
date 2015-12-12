@@ -12,8 +12,8 @@
                   <div class="row text-center">
                     <div class="col-md-12">
                         <!-- <h1>Confirmed!</h1> -->
-                        <p class="large_p">MIK will contact you in few hours and let you know the quote. Thank you.</p>
-                        <p class="large_p">MIK provides customers with free box and mattress cover rental services. Do you need any of these items?</p>
+                        <p class="large_p">MIK will contact you in few hours and let you know the quote.</p>
+                        <p class="large_p">MIK provides customers with free boxes and mattress cover rental services. Do you need any of these items?</p>
                     </div>
 
                   </div>

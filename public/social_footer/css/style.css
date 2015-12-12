@@ -83,28 +83,28 @@ body {
 .icon--spotify a {
   background-color: #80b719;
   background-size: 49px;
-  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/call.png");
+  background-image: url("http://localhost/~umair/MIK/public/social_footer/icons/call.png");
 }
 .icon--facebook a {
   background-color: #3b5998;
   background-size: 49px;
-  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/facebook.png");
+  background-image: url("http://localhost/~umair/MIK/public/social_footer/icons/facebook.png");
 }
 
 .icon--twitter a {
   background-color: #00aced;
   background-size: 49px;
-  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/twitter.png");
+  background-image: url("http://localhost/~umair/MIK/public/social_footer/icons/twitter.png");
 }
 
 .icon--gplus a {
   background-color: #007fb1;
   background-size: 49px;
-  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/googleplus.png");
+  background-image: url("http://localhost/~umair/MIK/public/social_footer/icons/googleplus.png");
 }
 
 .icon--youtube a {
   background-color: #5c3d2e;
   background-size: 49px;
-  background-image: url("http://localhost/~sherazali/removals-laravel/public/social_footer/icons/youtube.png");
+  background-image: url("http://localhost/~umair/MIK/public/social_footer/icons/youtube.png");
 }

@@ -9,7 +9,7 @@
               <div class="modal-body">
                 <div class="container-fluid">
                   <div class="row text-center">
-                    <div class="col-md-12"><p class="large_p">Please transfer the total amount due to account number below within 48 hours of placing the order. The refund will be transferred within 24 hours of the rental items being returned to us.</p>
+                    <div class="col-md-12"><p class="large_p">Please transfer the total amount due to account number below within 12 hours of placing the order. The refund will be transferred within 24 hours of the rental items being returned to us.</p>
                     </div>
 
                   </div>
