@@ -16,7 +16,7 @@ class PurchaseService extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['number_in_row', 'title', 'image', 'status', 'price'];
+	protected $fillable = ['number_in_row', 'title', 'image', 'status', 'price', 'max_quantity'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -24,6 +24,14 @@ class PurchaseService extends Model {
 	 * @var array
 	 */
 	protected $hidden = [];
+
+	public function getQuantity($q = 10){
+		$quantity = [];
+		for ($i = 0; $i <= $q; $i++) {
+			$quantity[$i] = $i;
+		}
+		return $quantity;
+	}
 
 	/**
 	 * Scope: Active services

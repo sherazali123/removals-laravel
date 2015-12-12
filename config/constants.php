@@ -133,9 +133,14 @@ return [
         'No' => 'Without elevator',
     ],
     'general' => [
-        'delivery_fee' => 200,
-        'refund' => 100,
         'page_size' => 1,
+    ],
+    'costs' => [
+      'rental_deposit_total' => 30000,
+      'delivery_fee' => 10000,
+      'total_amount_due' => 40000,
+      'refund' => 10000,
+      'total_cost' => 600000
     ],
     'admin' => [
         'email' => env('ADMIN_EMAIL', 'sheraz.ali342@gmail.com'),

@@ -23,7 +23,7 @@ class BoxRentalController extends BaseController {
     	$this->view_data['view_path_root'] = 'page.box-rental';
 
     }
-	
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -34,14 +34,9 @@ class BoxRentalController extends BaseController {
 		$this->view_data['rental_services'] = RentalService::active()->get();
 		$this->view_data['purchase_services'] = PurchaseService::active()->get();
 
-		$this->view_data['quantities'] = Config::get('constants.quantity_10');
 
-		$this->view_data['cost'] = [];
-		$this->view_data['cost']['rental_deposit_total'] = 0;
-		$this->view_data['cost']['purchase_deposit_total'] = 0;
-		$this->view_data['cost']['delivery_fee'] = (float) Config::get('constants.general')['delivery_fee'];
-		$this->view_data['cost']['refund'] = (float) Config::get('constants.general')['refund'];
-		$this->view_data['cost']['total_amount_due'] = $this->view_data['cost']['rental_deposit_total'] + $this->view_data['cost']['purchase_deposit_total'] + $this->view_data['cost']['delivery_fee'];
+		$this->view_data['costs'] = Config::get('constants.costs');
+
 
 
 

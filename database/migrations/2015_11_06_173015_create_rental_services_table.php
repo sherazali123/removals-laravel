@@ -20,6 +20,7 @@ class CreateRentalServicesTable extends Migration {
 			$table->string('image',150);
 			$table->double('price', 10, 2)->nullable();
 			$table->integer('status')->default(0);
+			$table->integer('max_quantity')->default(10);
 			$table->timestamps();
 		});
 	}

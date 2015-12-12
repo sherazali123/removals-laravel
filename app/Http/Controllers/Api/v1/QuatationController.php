@@ -12,7 +12,7 @@ use App\Item;
 use Illuminate\Http\Request;
 
 class QuatationController extends Controller {
-	
+
 	/**
      * Intialize response array for current request
      *
@@ -28,9 +28,9 @@ class QuatationController extends Controller {
     public function __construct() {
 
     	// code here
-    	
+
     }
-	
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -66,9 +66,9 @@ class QuatationController extends Controller {
 		$input = $request->all();
 
 		$data = $input;
-		
+
 		$rules = [
-										'service_type' => 'required|max:150',
+												'service_type' => 'required|max:150',
 								        'name_quote' => 'required|max:150',
 								        'email_quote' => 'required|email',
 								        'phone_quote' => 'required',
@@ -85,7 +85,7 @@ class QuatationController extends Controller {
 								        'delivery_room_no' => 'max:255',
 								        'delivery_elevator' => 'max:3',
 								        'message_quote' => 'max:1000'
-								    ];
+							];
 
 		$this->validate($request, $rules);
 
@@ -107,7 +107,9 @@ class QuatationController extends Controller {
 		Mail::send('emails.quotation', $res, function ($m) use ($data) {
             $m->to(Config::get('constants.admin')['email'], Config::get('constants.admin')['name'])->subject($data['name_quote'].' has filled a quotation for you.');
         });
-		return redirect('/box-rental');
+
+
+		return response()->json($res);
 	}
 
 	/**

@@ -11,7 +11,7 @@
 	<link href="{{ asset('/layerslider/css/layerslider.css') }}" rel="stylesheet">
 @endsection
 @section('content')
-    
+
     @include('page/box-rental/partials/features_banner')
     @include('page/box-rental/partials/quatation')
 
@@ -34,7 +34,7 @@
 	        $.ajax({
 		        type: 'POST',
 		        url: $("#box_rentel_form").attr('action'),
-		        data: $('#box_rentel_form').serialize(), 
+		        data: $('#box_rentel_form').serialize(),
 		        beforeSend: function(data){
 		        },
 		        success: function(response) {
@@ -42,12 +42,12 @@
 		           if(response.status == 200){
 		           	responseData = response;
 
-		           	$("#confirm_rental_deposit_total").html(response.data.cost.rental_deposit_total);
-		           	$("#confirm_purchase_deposit_total").html(response.data.cost.purchase_deposit_total);
-		           	$("#confirm_delivery_fee").html(response.data.cost.delivery_fee);
-		           	$("#confirm_total_amount_due").html(response.data.cost.total_amount_due);
-		           	$("#confirm_refund").html(response.data.cost.refund);
-		           	$("#confirm_total_cost").html(response.data.cost.total_amount_due);
+                // "#confirm_rental_deposit_total").html(response.data.cost.rental_deposit_total);
+                // "#confirm_purchase_deposit_total").html(response.data.cost.purchase_deposit_total);
+                // "#confirm_delivery_fee").html(response.data.cost.delivery_fee);
+                // "#confirm_total_amount_due").html(response.data.cost.total_amount_due);
+                // "#confirm_refund").html(response.data.cost.refund);
+                // "#confirm_total_cost").html(response.data.cost.total_amount_due);
 
 		           	$("#order").modal('show');
 		           } else {
@@ -64,19 +64,19 @@
 
 	      }
 	    });
-	    
+
 	    $("#confirmOrderBtn").on('click', function(e){
 	    	$.ajax({
 		        type: 'POST',
 		        url: $("#box_rentel_form").attr('action') + '-email',
-		        data: responseData, 
+		        data: responseData,
 		        beforeSend: function(data){
 		        	$("#confirmOrderBtn").html('Confirming...');
 		        	$("#confirmOrderBtn").prop('disabled', true);
 		        },
 		        success: function(response) {
 		           if(response.status == 200){
-		           	
+
 		           	$(':input','#box_rentel_form')
 						  .not(':button, :submit, :reset, :hidden')
 						  .val('')
@@ -105,7 +105,7 @@
 		            alert("There was an error submitting comment");
 		        }
 		     });
-	        
+
 	    });
 	</script>
 
@@ -116,11 +116,11 @@
 	<script type="text/javascript">
 	    // Running the code when the document is ready
 	    var cost = {
-		    			rental_deposit_total: 0, 
+		    			rental_deposit_total: 0,
 		    			purchase_deposit_total: 0,
-		    			delivery_fee: {{ $cost['delivery_fee'] }},
-		    			refund: {{ $cost['refund'] }},
-		    			total_amount_due: {{ $cost['delivery_fee'] }}
+		    			delivery_fee: {{ $costs['delivery_fee'] }},
+		    			refund: {{ $costs['refund'] }},
+		    			total_amount_due: {{ $costs['delivery_fee'] }}
 	    			};
 
 	    $(document).ready(function(){
@@ -129,12 +129,12 @@
 	            $("#if_filled_quatation").slideDown();
 	           } else {
 	            $("#if_filled_quatation").slideUp();
-	           }     
+	           }
 	        });
 
-	        $(".serviceChanged").on('change', function(e){
-	        	updateCosts();
-	        });
+	        // $(".serviceChanged").on('change', function(e){
+	        // 	updateCosts();
+	        // });
 
 	    });
 	    function updateCosts(){
@@ -156,7 +156,7 @@
 			});
 
 			cost.total_amount_due = cost.rental_deposit_total + cost.purchase_deposit_total + cost.delivery_fee;
-			
+
 
 			$("#br_rental_deposit_total").html(cost.rental_deposit_total);
 		    $("#br_purchase_deposit_total").html(cost.purchase_deposit_total);

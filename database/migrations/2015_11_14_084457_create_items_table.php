@@ -12,7 +12,7 @@ class CreateItemsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('items', function(Blueprint $table)
+		Schema::create('item', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('number_in_row');
@@ -31,7 +31,7 @@ class CreateItemsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('items');
+		Schema::drop('item');
 	}
 
 }

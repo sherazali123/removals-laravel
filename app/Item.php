@@ -11,7 +11,7 @@ class Item extends Model {
 	 *
 	 * @var string
 	 */
-	protected $table = 'items';
+	protected $table = 'item';
 
 	/**
 	 * The attributes that are mass assignable.
@@ -27,7 +27,7 @@ class Item extends Model {
 	 */
 	protected $hidden = [];
 
-	
+
 	public function getQuantity(){
 		if(in_array($this->title, ['Small Box', 'Big Box', 'Small Luggage (less than 20 inch)', 'Big Luggage (more than 20 inch)'])){
 			return Config::get('constants.quantity_40');
@@ -41,8 +41,17 @@ class Item extends Model {
 	 *
 	 * @var collection
 	 */
-	public function scopeActive($query){	
+	public function scopeActive($query){
 		return $query->where('status', '<>', -1);
+	}
+
+	/**
+	 * Scope: by type
+	 *
+	 * @var collection
+	 */
+	public function scopeByType($query, $type = 1){
+		return $query->where('type', '=', $type);
 	}
 
 }

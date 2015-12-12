@@ -4,60 +4,38 @@
 	<tr>
 		<td style="width:300px;">Title</td>
 		<td style="width:150px;">Quantity</td>
-		<td style="width:150px;">Per Price</td>
-		<td style="width:150px;">Price</td>
 	</tr>
 	@foreach($data['rental_services'] as $key => $value)
 		<tr>
 			<td style="width:300px;">{{ $value['title'] }}:</td>
 			<td style="width:150px;">{{ $value['quantity'] }}</td>
-			<td style="width:150px;">{{ $value['unit_price'] }}</td>
-			<td style="width:150px;">{{ $value['price'] }}</td>
 		</tr>
 	@endforeach
 </table>
 
-<h4>Purchase Services</h4>
-
-<table>
-	<tr>
-		<td style="width:300px;">Title</td>
-		<td style="width:150px;">Quantity</td>
-		<td style="width:150px;">Per Price</td>
-		<td style="width:150px;">Price</td>
-	</tr>
-	@foreach($data['purchase_services'] as $key => $value)
-		<tr>
-			<td style="width:300px;">{{ $value['title'] }}:</td>
-			<td style="width:150px;">{{ $value['quantity'] }}</td>
-			<td style="width:150px;">{{ $value['unit_price'] }}</td>
-			<td style="width:150px;">{{ $value['price'] }}</td>
-		</tr>
-	@endforeach
-</table>
 
 <h4>Cost</h4>
 
 <table>
 	<tr>
 		<td style="width:300px;">Rental Deposit Total:</td>
-		<td style="width:700px;">{{ $data['cost']['rental_deposit_total'] }}</td>
-	</tr>
-	<tr>
-		<td style="width:300px;">Purchase Deposit Total:</td>
-		<td style="width:700px;">{{ $data['cost']['purchase_deposit_total'] }}</td>
+		<td style="width:700px;">{{ $data['costs']['rental_deposit_total'] }}</td>
 	</tr>
 	<tr>
 		<td style="width:300px;">Delivery Fee:</td>
-		<td style="width:700px;">{{ $data['cost']['delivery_fee'] }}</td>
+		<td style="width:700px;">{{ $data['costs']['delivery_fee'] }}</td>
 	</tr>
 	<tr>
 		<td style="width:300px;">Refund:</td>
-		<td style="width:700px;">{{ $data['cost']['refund'] }}</td>
+		<td style="width:700px;">{{ $data['costs']['refund'] }}</td>
 	</tr>
 	<tr>
 		<td style="width:300px;">Total Amount Due:</td>
-		<td style="width:700px;">{{ $data['cost']['total_amount_due'] }}</td>
+		<td style="width:700px;">{{ $data['costs']['total_amount_due'] }}</td>
+	</tr>
+	<tr>
+		<td style="width:300px;"><b>Total</b></td>
+		<td style="width:700px;"><b>{{ $data['costs']['total_cost'] }}</b></td>
 	</tr>
 </table>
 

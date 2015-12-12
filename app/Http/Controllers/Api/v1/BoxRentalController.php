@@ -27,7 +27,7 @@ class BoxRentalController extends Controller {
     public function __construct() {
 
     	// code here
-    	
+
     }
 
 	/**
@@ -48,7 +48,7 @@ class BoxRentalController extends Controller {
 	 */
 	public function create()
 	{
-		die;		
+		die;
 	}
 
 	/**
@@ -67,12 +67,7 @@ class BoxRentalController extends Controller {
 		$rental_services = RentalService::active()->get();
 		$purchase_services = PurchaseService::active()->get();
 
-		$data['cost'] = [];
-		$data['cost']['rental_deposit_total'] = 0;
-		$data['cost']['purchase_deposit_total'] = 0;
-		$data['cost']['delivery_fee'] = (float) Config::get('constants.general')['delivery_fee'];
-		$data['cost']['refund'] = (float) Config::get('constants.general')['refund'];
-		$data['cost']['total_amount_due'] = 0;
+		$data['costs'] = Config::get('constants.costs');
 
 		$data['rental_services'] = [];
 		foreach ($rental_services as $rental_service) {
@@ -84,24 +79,21 @@ class BoxRentalController extends Controller {
 			$data['rental_services'][$rental_service->id]['quantity'] = (int) $input[$rental_service->id.'___rental'];
 			$data['rental_services'][$rental_service->id]['unit_price'] = (float) $rental_service->price;
 			$data['rental_services'][$rental_service->id]['price'] = $data['rental_services'][$rental_service->id]['quantity'] * $data['rental_services'][$rental_service->id]['unit_price'];
-			$data['cost']['rental_deposit_total'] = $data['cost']['rental_deposit_total'] + $data['rental_services'][$rental_service->id]['price'];
 		}
 
-		
-		$data['purchase_services'] = [];
-		foreach ($purchase_services as $purchase_service) {
-			if(!isset($input[$purchase_service->id.'___purchase'])){
-				$res['message'] = 'An error occour, please refresh page and try again.';
-				return response()->json($res);
-			}
-			$data['purchase_services'][$purchase_service->id]['title'] = $purchase_service->title;
-			$data['purchase_services'][$purchase_service->id]['quantity'] = (int) $input[$purchase_service->id.'___purchase'];
-			$data['purchase_services'][$purchase_service->id]['unit_price'] = (float) $purchase_service->price;
-			$data['purchase_services'][$purchase_service->id]['price'] = $data['purchase_services'][$purchase_service->id]['quantity'] * $data['purchase_services'][$purchase_service->id]['unit_price'];
-			$data['cost']['purchase_deposit_total'] = $data['cost']['purchase_deposit_total'] + $data['purchase_services'][$purchase_service->id]['price'];
-		}
 
-		$data['cost']['total_amount_due'] = $data['cost']['rental_deposit_total'] + $data['cost']['purchase_deposit_total'] + $data['cost']['delivery_fee'];
+		// $data['purchase_services'] = [];
+		// foreach ($purchase_services as $purchase_service) {
+		// 	if(!isset($input[$purchase_service->id.'___purchase'])){
+		// 		$res['message'] = 'An error occour, please refresh page and try again.';
+		// 		return response()->json($res);
+		// 	}
+		// 	$data['purchase_services'][$purchase_service->id]['title'] = $purchase_service->title;
+		// 	$data['purchase_services'][$purchase_service->id]['quantity'] = (int) $input[$purchase_service->id.'___purchase'];
+		// 	$data['purchase_services'][$purchase_service->id]['unit_price'] = (float) $purchase_service->price;
+		// 	$data['purchase_services'][$purchase_service->id]['price'] = $data['purchase_services'][$purchase_service->id]['quantity'] * $data['purchase_services'][$purchase_service->id]['unit_price'];
+		// }
+
 
 		$data['delievery_info'] = [];
 		$data['delievery_info']['preferred_delivery_address'] = $input['preferred_delivery_address'];
