@@ -101,7 +101,7 @@
     </header><!-- End Header -->
 
 	@yield('content')
-
+	@if(in_array(Request::path(), ['/', 'about']))
 	<footer><!-- Footer Start -->
         <div class="container">
              <div id="social_footer" >
@@ -115,7 +115,7 @@
                 </div>
              </div><!-- End container -->
     </footer><!-- End footer -->
-
+		@endif
 
     <div id="copy">
     	<div class="container">
