@@ -28,9 +28,6 @@ Route::get('blog', 'Blog\IndexController@index');
 
 Route::get('about', 'Page\AboutController@index');
 
-Route::get('/footer', function () {
-    return view('application.footer');
-});
 
 // api
 Route::group(['prefix' => 'api'], function()
