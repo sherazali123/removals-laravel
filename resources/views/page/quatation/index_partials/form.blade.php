@@ -14,7 +14,7 @@
                                     </h4>
                                 </div>
                                 <div id="collapseOne" class="collapse">
-                                    <li class="list-group-item">Transpotation</li>
+                                    <li class="list-group-item">Transportation</li>
                                 </div>
                                 </div>
                                 <div class="panel-group panel col-md-4">
@@ -24,9 +24,9 @@
                                     </h4>
                                 </div>
                                 <div id="collapseTwo" class="collapse">
-                                    <li class="list-group-item">Transpotation</li>
+                                    <li class="list-group-item">Transportation</li>
                                     <li class="list-group-item">Loading</li>
-                                    <li class="list-group-item">Unlaoding</li>
+                                    <li class="list-group-item">Unloading</li>
                                 </div>
                                 </div>
                                 <div class="panel-group panel col-md-4">
@@ -36,9 +36,9 @@
                                         </h4>
                                     </div>
                                     <div id="collapseThree" class="collapse">
-                                        <li class="list-group-item">Transpotation</li>
+                                        <li class="list-group-item">Transportation</li>
                                         <li class="list-group-item">Loading</li>
-                                        <li class="list-group-item">Unlaoding</li>
+                                        <li class="list-group-item">Unloading</li>
                                         <li class="list-group-item">Packing</li>
                                         <li class="list-group-item">Unpacking</li>
                                  </div>
@@ -49,7 +49,7 @@
 
                        <div id="collapseAlertOne" role="tabpanel" class="collapse">
                                   <div class="alert alert-info" role="alert" id="myAlert1">
-                                          <strong>Economic Service</strong> <br> Only Transpotation (Cheapest Option) We drive, customers load and unload. Before the drivers arrival please ensure that all items are brought down to the ground floor.
+                                          <strong>Economic Service</strong> <br> Only Transportation (Cheapest Option) We drive, customers load and unload. Before the drivers arrival please ensure that all items are brought down to the ground floor.
                                   </div>
                        </div>
                        <div id="collapseAlertTwo" role="tabpanel" class="collapse">
@@ -92,7 +92,7 @@
                                         <label>Telephone</label>
                                         {!! Form::text('phone_quote', null,
                                                                         array(null,
-                                                                              'class'=>'form-control phone_no required')) !!}
+                                                                              'class'=>'form-control required')) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">

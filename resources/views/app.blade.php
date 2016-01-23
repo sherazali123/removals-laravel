@@ -106,7 +106,7 @@
         <div class="container">
              <div id="social_footer" >
                         <ul>
-														<li><a class="_phone" href="tel://01093516307"><i class="icon-phone"></i></a></li>
+														<li><a class="_phone" href="tel:01093516307"><i class="icon-phone"></i></a></li>
                             <li><a class="_facebook" target="_blank" href="https://www.facebook.com/moveinkorea/"><i class="icon-facebook"></i></a></li>
                             <li><a class="_twitter"  target="_blank" href="https://twitter.com/movingpeople_"><i class="icon-twitter"></i></a></li>
                             <li><a class="_google"  target="_blank" href="http://moveinkorea.blogspot.kr/"><i class="icon-google"></i></a></li>

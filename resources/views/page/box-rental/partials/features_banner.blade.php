@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-md-1 text-center"> </div>
                 </div><!-- End row -->
-                <h3 class="text-center">Moving never can't be more easy!</h3>
+                <h3 class="text-center">Moving has never been easier!</h3>
                 <p class="lead text-center">
                     Call Us 010-2214-7112
                 </p>

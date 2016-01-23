@@ -117,8 +117,8 @@ return [
         '40' => '40',
     ],
     'pessengers' => [
-        '1' => '1 Pessenger',
-        '2' => '2 Pessengers',
+        '1' => '1 Passenger',
+        '2' => '2 Passengers',
     ],
     'floors' => [
         '1' => '1st Floor',

@@ -46,7 +46,7 @@ class QuatationController extends BaseController {
          $this->view_data['items_2']['name'] = "Larger goods (two person moveable)";
          $this->view_data['items_2']['list'] = Item::byType(2)->active()->orderBy('number_in_row')->get();
 
-         $this->view_data['items_3']['name'] = "Goods that need to be disassembled and assembled";
+         $this->view_data['items_3']['name'] = "Goods that need to be dissemble and assemble";
          $this->view_data['items_3']['list'] = Item::byType(3)->active()->orderBy('number_in_row')->get();
 
         return view($this->view_data['view_path_root'].'.index', $this->view_data);
