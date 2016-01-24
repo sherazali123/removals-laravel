@@ -29,8 +29,9 @@ class Item extends Model {
 
 
 	public function getQuantity(){
-		if(in_array($this->title, ['Small Box', 'Big Box', 'Small Luggage (less than 20 inch)', 'Big Luggage (more than 20 inch)'])){
-			return Config::get('constants.quantity_40');
+		if(in_array($this->title, ['Box', 'Small bag', 'Big bag'])){
+
+			return Config::get('constants.quantity_30');
 		} else {
 			return Config::get('constants.quantity_10');
 		}
